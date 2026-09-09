@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicios Técnicos y Mantenimiento | Omologra</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Servicios Técnicos y de Mantenimiento | Omologra</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
@@ -25,7 +25,9 @@
 
     <!-- SECCIÓN HÉROE / INICIO -->
     <section id="inicio" class="hero">
-        <div class="container hero-content">
+    <div class="container hero-content">
+        <!-- Columna Izquierda: El Texto Informativo Legible -->
+        <div class="hero-text">
             <h1>Mantenimiento Técnico Profesional y Urgente</h1>
             <p>Soluciones rápidas y garantizadas para empresas y particulares. Nos desplazamos en tiempo récord.</p>
             <div class="hero-buttons">
@@ -33,7 +35,14 @@
                 <a href="tel:+34600000000" class="btn-secondary">📞 Llamar Ahora</a>
             </div>
         </div>
-    </section>
+        
+        <!-- Columna Derecha: Tu foto real del técnico instalando/reparando el motor -->
+        <div class="hero-image">
+            <img src="img/reparacion.jpg" alt="Mantenimiento de puertas automáticas Omologra">
+        </div>
+    </div>
+</section>
+
 
     <!-- SECCIÓN DE SERVICIOS -->
     <section id="servicios" class="services">
@@ -57,13 +66,29 @@
     </section>
 
     <!-- SECCIÓN DE COBERTURA -->
-    <section id="cobertura" class="coverage">
-        <div class="container">
-            <h2>Zonas de Cobertura</h2>
-            <p>Prestamos servicio técnico en toda la provincia de <strong>Granada</strong>, polígonos industriales y municipios colindantes.</p>
-            <p class="horario">🕒 Disponibles de Lunes a Viernes de 8:00 a 19:00.</p>
+<section id="cobertura" class="coverage">
+    <div class="container">
+        <h2 class="section-title">Zonas de Cobertura</h2>
+        
+        <div class="coverage-layout">
+            <!-- Bloque Izquierdo: Zonas de Servicio Técnico -->
+            <div class="coverage-box info-box">
+                <h3>Área de Actuación</h3>
+                <p>Prestamos servicio técnico en toda la provincia de <strong>Granada y provincia</strong>, polígonos industriales y municipios colindantes.</p>
+            </div>
+
+            <!-- Bloque Derecho: Horarios y Disponibilidad Comercial -->
+            <div class="coverage-box status-box">
+                <h3>Disponibilidad Comercial</h3>
+                <p class="horario-destacado">🕒 Lunes a Viernes de 8:00 a 19:00</p>
+                <div class="service-badge">
+                    <span class="live-dot"></span>
+                    <p>Atención al cliente y soporte técnico operativo durante la jornada laboral para la gestión de incidencias.</p>
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- SECCIÓN DE CONTACTO -->
     <section id="contacto" class="contact">
@@ -92,13 +117,17 @@
 
     <!-- PIE DE PÁGINA -->
     <footer class="footer">
-    <p>&copy; 2026 Omologra - Todos los derechos reservados.</p>
-    <div style="margin-top: 10px;">
-        <a href="aviso-legal.html" style="color: var(--secondary-color); text-decoration: none; margin: 0 10px;">⚖️ Aviso Legal</a> | 
-        <a href="politica-privacidad.html" style="color: var(--secondary-color); text-decoration: none; margin: 0 10px;">🔐 Política de Privacidad</a> | 
-        <a href="politica-cookies.html" style="color: var(--secondary-color); text-decoration: none; margin: 0 10px;">⚙️ Política de Cookies</a>
-    </div>
-</footer>
+        <div class="container">
+            <p>&copy; 2026 Omologra - Todos los derechos reservados.</p>
+            <div class="footer-links">
+                <a href="aviso-legal.html">Aviso Legal</a>
+                <span class="separator">|</span>
+                <a href="politica-privacidad.html">Política de Privacidad</a>
+                <span class="separator">|</span>
+                <a href="politica-cookies.html">Política de Cookies</a>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>

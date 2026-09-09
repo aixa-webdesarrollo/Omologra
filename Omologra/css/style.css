@@ -1,10 +1,10 @@
-/* VARIABLES DE DISEÑO (Colores corporativos) */
+/* VARIABLES DE DISEÑO (Actualizadas con los colores oficiales de Omologra) */
 :root {
-    --primary-color: #0056b3;    /* Azul profesional técnico */
-    --secondary-color: #ff9900;  /* Naranja de aviso/urgencias */
-    --dark-color: #1a252f;       /* Gris muy oscuro para textos */
-    --light-color: #f8f9fa;      /* Gris claro para fondos alternos */
-    --text-color: #4a5568;       /* Gris medio para lectura */
+    --primary-color: #095540;    /* Verde corporativo principal (Tu marca) */
+    --secondary-color: #4EAF47;  /* Verde manzana vibrante (Para botones y llamadas a la acción) */
+    --dark-color: #12221D;       /* Verde casi negro muy elegante para títulos oscuros o textos fuertes */
+    --light-color: #F7F9F6;      /* Blanco lino/hueso del fondo del logo para secciones alternas */
+    --text-color: #3A4D48;       /* Gris verdoso corporativo para una lectura cómoda en párrafos */
 }
 
 /* ESTILOS GENERALES */
@@ -45,7 +45,7 @@ h2.section-title {
 
 /* CONTROL DEL TAMAÑO DEL LOGO */
 .logo-img {
-    height: 75px;       /* ↕️ Ajusta este número (en píxeles) para cambiar la altura del logo */
+    height: 125px;       /* ↕️ Ajusta este número (en píxeles) para cambiar la altura del logo */
     width: auto;        /* Esto hace que el ancho se calcule solo y no se deforme */
     display: block;     /* Evita espacios en blanco raros debajo de la imagen */
 }
