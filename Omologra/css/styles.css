@@ -14,6 +14,10 @@
     --font-body: 'Open Sans', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* ESTILOS GENERALES */
 * {
     box-sizing: border-box;
@@ -27,6 +31,14 @@ body {
     background-color: #ffffff;
     color: var(--text-color); /* Cambiado de dark-color a text-color para párrafos más suaves */
     line-height: 1.6;
+}
+
+/* ====================================================
+   CORRECCIÓN DEL DESPLAZAMIENTO POR CABECERA FIJA
+   ==================================================== */
+section {
+    /* Ajusta este valor (80px o 90px) según el grosor real de tu header */
+    scroll-margin-top: 70px; 
 }
 
 .container {
@@ -81,39 +93,82 @@ h2.section-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 8px 20px;
 }
 
 .nav {
     display: flex;
     align-items: center;
+    gap: 20px;
 }
 
 .nav a {
-    color: var(--dark-color);
+    color: var(--text-color);
     text-decoration: none;
-    margin-left: 25px;
-    font-weight: 600;
-    font-size: 1.2rem;
-    transition: color 0.3s ease;
+    font-weight: 500;
+    font-size: 15px;
+    transition: color 0.2s ease;
 }
 
 .nav a:hover {
-    color: var(--primary-color); /* Efecto al pasar el ratón por el menú */
+    color: var(--primary-color); 
 }
 
 .btn-nav {
-    background: var(--primary-color);
+    background-color: var(--primary-color);
     color: white !important;
-    padding: 10px 20px;
-    border-radius: 6px; /* Bordes ligeramente más modernos */
-    transition: background 0.3s ease !important;
+    padding: 8px 16px;
+    border-radius: 4px; /* Bordes ligeramente más modernos */
+    font-weight: 600;
+    transition: background 0.2s ease !important;
 }
 
 .btn-nav:hover {
     background: #489c59;
-    border-color: #ffffff;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(9, 85, 64, 0.15); 
+}
+
+/* ==========================================
+   ADAPTACIÓN PARA DISPOSITIVOS MÓVILES
+   ========================================== */
+@media (max-width: 768px) {
+    /* Cambia la cabecera a vertical para que quepa todo */
+    .navbar {
+        flex-direction: column;
+        gap: 12px;
+        padding: 12px 10px;
+    }
+
+    /* Reduce un poco el logotipo en el móvil si fuera necesario */
+    .logo-img {
+        max-height: 125px;
+        width: auto; 
+    }
+
+    /* El menú se convierte en una rejilla limpia y táctil */
+    .nav {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* Divide los 4 enlaces normales en filas iguales */
+        gap: 6px;
+        text-align: center;
+    }
+
+    /* Estilos individuales para los enlaces de texto en móvil */
+    .nav a:not(.btn-nav) {
+        font-size: 12px; /* Letra ligeramente más pequeña para que no se amontone */
+        padding: 10px 2px;
+        background-color: rgba(9, 85, 64, 0.05); /* Fondo sutil verde corporativo para que parezcan botones limpios */
+        border-radius: 4px;
+        color: var(--primary-color);
+    }
+
+    /* El botón de acción "Solicitar Técnico" ocupa todo el ancho abajo */
+    .nav .btn-nav {
+        grid-column: span 4; /* Se estira a lo largo de las 4 columnas abajo del todo */
+        font-size: 14px;
+        padding: 12px;
+        margin-top: 4px;
+    }
 }
 
 .btn-nav1 {
@@ -369,6 +424,108 @@ h2.section-title {
     }
 }
 
+/* ====================================================
+   ESTILOS PARA EL ACORDEÓN CON COLETILLA "VER RESPUESTA"
+   ==================================================== */
+.faqs-section {
+    background-color: #ffffff;
+    padding: 60px 0;
+}
+
+.faqs-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.faq-item {
+    background-color: var(--light-color);
+    border-left: 4px solid var(--primary-color);
+    border-radius: 0 8px 8px 0;
+    padding: 16px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question {
+    color: var(--dark-color);
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    outline: none;
+    user-select: none;
+}
+
+/* Indicación visual interactiva (Flechita + Texto invisible por CSS) */
+.faq-question::after {
+    content: 'Ver respuesta  ▼'; /* Añadimos la coletilla de forma automática */
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #8a9a95; /* Un gris verdoso muy suave y discreto para que no compita con el título */
+    white-space: nowrap;
+    margin-left: 15px;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* Cuando el acordeón se abre: cambiamos el texto a "Cerrar" y giramos la flecha */
+.faq-item[open] .faq-question::after {
+    content: 'Ocultar  ▲'; 
+    color: var(--secondary-color); /* Cambia a tu verde manzana vibrante para indicar que está activo */
+}
+
+.faq-answer {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.faq-answer p {
+    color: var(--text-color);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.faq-answer strong {
+    color: var(--secondary-color);
+}
+
+/* ====================================================
+   OPTIMIZACIÓN EXCLUSIVA PARA MÓVILES
+   ==================================================== */
+@media (max-width: 768px) {
+    .faqs-section {
+        padding: 40px 0;
+    }
+
+    .faq-item {
+        padding: 14px 16px;
+    }
+
+    .faq-question {
+        font-size: 1rem;
+    }
+
+    /* En el móvil acortamos el texto para ahorrar espacio lateral */
+    .faq-question::after {
+        content: 'Ver  ▼'; 
+        font-size: 0.75rem;
+    }
+
+    .faq-item[open] .faq-question::after {
+        content: 'Cerrar  ▲';
+    }
+
+    .faq-answer p {
+        font-size: 0.9rem;
+    }
+}
+
 /* CONTACTO (FORMULARIO) */
 .contact {
     padding: 80px 0;
@@ -506,32 +663,77 @@ h2.section-title {
     background-color: var(--dark-color); /* Tu verde noche oscuro */
     color: #a0aec0;                      /* Gris claro suave para el copyright */
     text-align: center;
-    padding: 30px 0;
-    font-size: 0.85rem;
+    padding: 25px 0;
+    font-size: 0.8rem;
     border-top: 3px solid var(--primary-color); /* Fina línea superior en tu verde principal */
 }
 
 .footer-links {
-    margin-top: 12px;
+    margin-top: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px; /* Distribuye el espacio de forma idéntica entre enlaces */
+    gap: 8px; 
 }
 
 .footer a {
-    color: #cbd5e0; /* Blanco grisáceo discreto y muy legible sobre fondo oscuro */
+    color: #a0aec0; /* Blanco grisáceo discreto y muy legible sobre fondo oscuro */
     text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
+    font-weight: 400;
+    padding: 2px 6px;
+    transition: color 0.2s ease;
+    background-color: 0.2s ease;
 }
 
 .footer a:hover {
-    color: var(--secondary-color);
-    text-decoration: underline;
+    color: white !important;
+    background-color: rgba(255,255,255,0.05);
+    border-radius: 4px;
 }
 
 .footer .separator {
     color: #4a5568; /* Gris oscuro para que las barras queden en segundo plano */
-    font-size: 0.8rem;
+    font-size: 0.75rem;
+    user-select: none;
+}
+
+/* ====================================================
+   BOTÓN FLOTANTE "VOLVER ARRIBA"
+   ==================================================== */
+.scroll-to-top {
+    position: fixed;
+    bottom: 25px;                  /* Distancia desde el borde inferior */
+    right: 25px;                   /* Colocado en el lado derecho */
+    width: 40px;                   /* Tamaño del botón */
+    height: 40px;
+    background-color: var(--primary-color); /* Tu verde corporativo de fondo */
+    color: #ffffff !important;
+    border-radius: 50px;           /* Formato completamente redondo tipo píldora */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra para que flote sobre el contenido */
+    z-index: 999;                  /* Asegura que siempre quede por encima de las fotos y textos */
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Efecto al pasar el ratón (PC) */
+.scroll-to-top:hover {
+    background-color: var(--secondary-color); /* Cambia a tu verde manzana vibrante */
+    transform: translateY(-3px);              /* Pequeña animación hacia arriba */
+    box-shadow: 0 6px 15px rgba(78, 175, 71, 0.3);
+}
+
+/* Optimización para pantallas de móvil */
+@media (max-width: 768px) {
+    .scroll-to-top {
+        bottom: 20px;              /* Un poco más ajustado en el móvil para que no estorbe */
+        right: 20px;
+        width: 38px;               /* Un pelín más pequeño y discreto en smartphones */
+        height: 38px;
+        font-size: 14px;
+        opacity: 0.85;             /* Ligeramente translúcido para que deje ver el texto de atrás */
+    }
 }
