@@ -51,8 +51,14 @@ h2.section-title {
 /* Estilo rápido exclusivo para que los textos legales se lean cómodamente */
 .legal-content { padding: 60px 0; max-width: 800px; margin: 0 auto; }
 .legal-content h1 { margin-bottom: 30px; color: var(--primary-color); }
-.legal-content h2 { margin: 30px 0 15px 0; font-size: 1.4rem; color: var(--dark-color); }
-.legal-content p { margin-bottom: 15px; color: var(--text-color); text-align: justify; }
+.legal-content h2 { margin: 30px 0 15px 0; font-size: 1.4rem; color: var(--primary-color); }
+.legal-content p, .legal-content li { margin-bottom: 15px; color: var(--dark-color); text-align: justify; }
+.legal-content ul { margin-left: 20px; margin-bottom: 15px; }
+
+.marca {
+    font-weight: bold;
+    color: var(--dark-color);
+}
 
 /* NAVEGACIÓN */
 .header {
@@ -87,7 +93,7 @@ h2.section-title {
     text-decoration: none;
     margin-left: 25px;
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 1.2rem;
     transition: color 0.3s ease;
 }
 
@@ -110,7 +116,24 @@ h2.section-title {
     box-shadow: 0 5px 15px rgba(9, 85, 64, 0.15); 
 }
 
-/* NUEVO DISEÑO EN DOS COLUMNAS SIN DEGRADADOS */
+.btn-nav1 {
+    display: inline-block; /* Permite controlar el tamaño exacto del botón */
+    background: var(--secondary-color);
+    color: white !important;
+    padding: 3px 10px; /* Altura mínima y anchura muy contenida */
+    font-size: 10px; /* Letra pequeña, fina y discreta */
+    text-decoration: none; /* Quita el subrayado del enlace */
+    border-radius: 4px; /* Bordes redondeados más sutiles para un botón pequeño */
+    transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.btn-nav1:hover {
+    background: #489c59;
+    transform: translateY(-1px); /* Elevación casi imperceptible */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1); /* Sombra muy suave */
+}
+
+
 .hero {
     /* Degradado con el tono verde medio que te gustó, suave, luminoso y con vida */
     background: linear-gradient(135deg, #2c6e5c 0%, #175444 100%);
@@ -411,6 +434,71 @@ h2.section-title {
     border-color: #ffffff;        /* Aparece el fino borde blanco */
     transform: translateY(-2px);  /* Pequeño efecto de elevación moderno */
     box-shadow: 0 5px 15px rgba(9, 85, 64, 0.15); /* Sombra suave para darle relieve */
+}
+
+/* Alineación de la casilla de verificación */
+.form-legal-checkbox {
+  margin-top: 20px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: flex-start;
+}
+
+/* El cuadro del input (checkbox) */
+.form-legal-checkbox input[type="checkbox"] {
+  margin-top: 3px;
+  cursor: pointer;
+}
+
+/* El texto de "Acepto la política..." */
+.form-legal-checkbox label {
+  font-size: 14px;
+  line-height: 1.4;
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+/* El enlace que abre tu política en otra pestaña */
+.form-legal-checkbox a {
+  color: #0056b3; 
+  text-decoration: underline;
+}
+
+/* Recuadro contenedor de la coletilla RGPD */
+.form-legal-info {
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  padding: 12px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  text-align: left; /* Asegura la alineación si el formulario está centrado */
+}
+
+/* Texto introductorio de la coletilla */
+.form-legal-info p {
+  font-size: 11px;
+  color: #555555;
+  margin: 0 0 6px 0;
+}
+
+/* Lista de puntos informativos */
+.form-legal-info ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; /* Elimina los puntos por estética y espacio */
+}
+
+/* Cada una de las líneas de información */
+.form-legal-info ul li {
+  font-size: 11px;
+  color: #666666;
+  line-height: 1.5;
+  margin-bottom: 4px;
+}
+
+/* Limpia el margen del último elemento de la lista */
+.form-legal-info ul li:last-child {
+  margin-bottom: 0;
 }
 
 /* PIE DE PÁGINA (Estilo Corporativo y Limpio) */

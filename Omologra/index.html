@@ -90,30 +90,49 @@
     </div>
 </section>
 
-    <!-- SECCIÓN DE CONTACTO -->
-    <section id="contacto" class="contact">
-        <div class="container">
-            <h2 class="section-title">Solicitar Asistencia Técnica</h2>
-            <p class="contact-subtitle">Rellena el formulario y un técnico se pondrá en contacto contigo enseguida.</p>
-            
-            <!-- Sustituye la URL por tu enlace de Formspree cuando lo tengas -->
-            <form action="https://formspree.io" method="POST" class="contact-form">
-                <div class="form-group">
-                    <label for="nombre">Nombre o Empresa:</label>
-                    <input type="text" id="nombre" name="name" required placeholder="Ej. Juan Pérez">
-                </div>
-                <div class="form-group">
-                    <label for="telefono">Teléfono de contacto:</label>
-                    <input type="tel" id="telefono" name="phone" required placeholder="Ej. 600 000 000">
-                </div>
-                <div class="form-group">
-                    <label for="mensaje">Descripción de la avería o servicio:</label>
-                    <textarea id="mensaje" name="message" rows="5" required placeholder="Describe brevemente qué necesitas..."></textarea>
-                </div>
-                <button type="submit" class="btn-submit">Enviar Solicitud</button>
-            </form>
-        </div>
-    </section>
+<!-- SECCIÓN DE CONTACTO -->
+<section id="contacto" class="contact">
+    <div class="container">
+        <h2 class="section-title">Solicitar Asistencia Técnica</h2>
+        <p class="contact-subtitle">Rellena el formulario y un técnico se pondrá en contacto contigo enseguida.</p>
+        
+        <!-- Sustituye la URL por tu enlace de Formspree cuando lo tengas -->
+        <form action="https://formspree.io" method="POST" class="contact-form">
+            <div class="form-group">
+                <label for="nombre">Nombre o Empresa:</label>
+                <input type="text" id="nombre" name="name" required placeholder="Ej. Juan Pérez">
+            </div>
+            <div class="form-group">
+                <label for="telefono">Teléfono de contacto:</label>
+                <input type="tel" id="telefono" name="phone" required placeholder="Ej. 600 000 000">
+            </div>
+            <div class="form-group">
+                <label for="mensaje">Descripción de la avería o servicio:</label>
+                <textarea id="mensaje" name="message" rows="5" required placeholder="Describe brevemente qué necesitas..."></textarea>
+            </div>
+
+            <!-- NUEVO: Casilla de Verificación Obligatoria -->
+            <div class="form-legal-checkbox">
+                <input type="checkbox" id="acepto-privacidad" name="privacy_accepted" required>
+                <label for="acepto-privacidad">Acepto la <a href="politica-privacidad.html" target="_blank">Política de Privacidad</a>. *</label>
+            </div>
+
+            <!-- NUEVO: Coletilla informativa RGPD -->
+            <div class="form-legal-info">
+                <p><strong>Información básica sobre protección de datos:</strong></p>
+                <ul>
+                    <li><strong>Responsable:</strong> Omologra</li>
+                    <li><strong>Finalidad:</strong> Atender tu solicitud de contacto y enviarte el presupuesto para servicios de puertas y automatismos.</li>
+                    <li><strong>Legitimación:</strong> Tu consentimiento expreso al marcar la casilla.</li>
+                    <li><strong>Destinatarios:</strong> No se cederán datos a terceros salvo obligación legal.</li>
+                    <li><strong>Derechos:</strong> Puedes acceder, rectificar, limitar y suprimir tus datos enviando un email a tu correo de contacto.</li>
+                </ul>
+            </div>
+
+            <button type="submit" class="btn-submit">Enviar Solicitud</button>
+        </form>
+    </div>
+</section>
 
     <!-- PIE DE PÁGINA -->
     <footer class="footer">
