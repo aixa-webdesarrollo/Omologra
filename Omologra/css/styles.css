@@ -1,6 +1,3 @@
-/* 1. IMPORTACIÓN DE FUENTES DESDE GOOGLE FONTS */
-@import url('https://googleapis.com');
-
 /* VARIABLES DE DISEÑO (Oficiales de Omologra) */
 :root {
     --primary-color: #095540;    /* Verde corporativo principal (Tu marca) */
@@ -57,11 +54,28 @@ h2.section-title {
 }
 
 /* Estilo rápido exclusivo para que los textos legales se lean cómodamente */
-.legal-content { padding: 60px 0; max-width: 800px; margin: 0 auto; }
-.legal-content h1 { margin-bottom: 30px; color: var(--primary-color); }
-.legal-content h2 { margin: 30px 0 15px 0; font-size: 1.4rem; color: var(--primary-color); }
+.legal-content { padding: 60px 20px; max-width: 800px; margin: 0 auto; }
+.legal-content h1 { 
+    font-size: clamp(1.6rem, 6vw, 2.4rem);
+    margin-bottom: 30px; 
+    color: var(--primary-color); 
+}
+.legal-content h2 { 
+    font-size: clamp(1.15rem, 4vw, 1.4rem);
+    margin: 30px 0 15px 0; 
+    color: var(--primary-color); 
+}
 .legal-content p, .legal-content li { margin-bottom: 15px; color: var(--dark-color); text-align: justify; }
 .legal-content ul { margin-left: 20px; margin-bottom: 15px; }
+
+@media (max-width: 768px) {
+    .legal-content {
+        padding: 40px 20px;
+    }
+    .legal-content p, .legal-content li {
+        text-align: left;
+    }
+}
 
 .marca {
     font-weight: bold;
@@ -150,7 +164,7 @@ h2.section-title {
     }
 
     /* Estilos individuales para los enlaces de texto en móvil */
-    .nav a:not(.btn-nav) {
+    .nav a:not(.btn-nav) :not(.btn-nav1) {
         font-size: 12px; /* Letra ligeramente más pequeña para que no se amontone */
         padding: 10px 2px;
         background-color: rgba(9, 85, 64, 0.05); /* Fondo sutil verde corporativo para que parezcan botones limpios */
@@ -164,6 +178,11 @@ h2.section-title {
         font-size: 14px;
         padding: 12px;
         margin-top: 4px;
+    }
+
+    .nav .btn-nav1 {
+        grid-column: 1 / -1;
+        justify-self: center;
     }
 }
 
