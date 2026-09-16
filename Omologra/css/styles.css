@@ -33,16 +33,12 @@ body {
     line-height: 1.6;
 }
 
-/* ====================================================
-   CORRECCIÓN DEL DESPLAZAMIENTO POR CABECERA FIJA
-   ==================================================== */
 section {
-    /* Ajusta este valor (80px o 90px) según el grosor real de tu header */
-    scroll-margin-top: 70px; 
+    scroll-margin-top: 90px; 
 }
 
 .container {
-    max-width: 1100px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -55,7 +51,7 @@ h1, h2, h3, h4 {
 
 h2.section-title {
     text-align: center;
-    font-size: 2.2rem;
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
     margin-bottom: 40px;
     color: var(--primary-color); /* Título de sección en tu verde principal */
 }
@@ -84,7 +80,7 @@ h2.section-title {
 
 /* CONTROL DEL TAMAÑO DEL LOGO */
 .logo-img {
-    height: 250px;
+    height: 70px;
     width: auto;        
     display: block;     
 }
@@ -188,7 +184,6 @@ h2.section-title {
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1); /* Sombra muy suave */
 }
 
-
 .hero {
     /* Degradado con el tono verde medio que te gustó, suave, luminoso y con vida */
     background: linear-gradient(135deg, #2c6e5c 0%, #175444 100%);
@@ -212,14 +207,14 @@ h2.section-title {
 }
 
 .hero-text h1 {
-    font-size: 2.8rem;
+    font-size: clamp(1.8rem, 5vw, 2.8rem);
     color: #ffffff; 
     margin-bottom: 20px;
     line-height: 1.2;
 }
 
 .hero-text p {
-    font-size: 1.15rem;
+    font-size: clamp(1rem, 2.5vw 1.15rem);
     color: #e2e8f0; /* Blanco grisáceo muy suave, comodísimo de leer */
     margin-bottom: 30px;
 }
@@ -298,7 +293,7 @@ h2.section-title {
 
 /* SERVICIOS (CUADRÍCULA CSS GRID) */
 .services {
-    padding: 80px 0;
+    padding: 50px 0;
     background-color: #ffffff;
 }
 
@@ -330,7 +325,7 @@ h2.section-title {
 /* COBERTURA (Diseño Limpio, Claro y Uniforme) */
 .coverage {
     background: #ffffff; /* Fondo blanco puro para separar secciones */
-    padding: 60px 0;
+    padding: 50px 0;
 }
 
 /* Título de la sección en tu verde principal */
@@ -368,7 +363,7 @@ h2.section-title {
 .coverage-box h3 {
     color: var(--primary-color);
     margin-bottom: 15px;
-    font-size: 1.4rem;
+    font-size: clamp(1.1rem, 3vw, 1.4rem);
     font-family: var(--font-titles);
 }
 
@@ -429,7 +424,7 @@ h2.section-title {
    ==================================================== */
 .faqs-section {
     background-color: #ffffff;
-    padding: 60px 0;
+    padding: 50px 0;
 }
 
 .faqs-container {
@@ -528,7 +523,7 @@ h2.section-title {
 
 /* CONTACTO (FORMULARIO) */
 .contact {
-    padding: 80px 0;
+    padding: 50px 0;
     background: #ffffff;
 }
 
@@ -706,7 +701,7 @@ h2.section-title {
     right: 25px;                   /* Colocado en el lado derecho */
     width: 40px;                   /* Tamaño del botón */
     height: 40px;
-    background-color: var(--primary-color); /* Tu verde corporativo de fondo */
+    background-color: var(--secondary-color); /* Tu verde corporativo de fondo */
     color: #ffffff !important;
     border-radius: 50px;           /* Formato completamente redondo tipo píldora */
     display: flex;
@@ -721,7 +716,7 @@ h2.section-title {
 
 /* Efecto al pasar el ratón (PC) */
 .scroll-to-top:hover {
-    background-color: var(--secondary-color); /* Cambia a tu verde manzana vibrante */
+    background-color: var(--primary-color); /* Cambia a tu verde manzana vibrante */
     transform: translateY(-3px);              /* Pequeña animación hacia arriba */
     box-shadow: 0 6px 15px rgba(78, 175, 71, 0.3);
 }
