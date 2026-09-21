@@ -762,7 +762,8 @@ h2.section-title {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 8px; 
+    gap: 8px;
+    flex-wrap: wrap;
 }
 
 .footer a {
@@ -770,8 +771,8 @@ h2.section-title {
     text-decoration: none;
     font-weight: 400;
     padding: 2px 6px;
-    transition: color 0.2s ease;
-    background-color: 0.2s ease;
+    background-color: transparent;
+    transition: color 0.2s ease, background-color 0.2s ease;
 }
 
 .footer a:hover {
@@ -784,6 +785,17 @@ h2.section-title {
     color: #4a5568; /* Gris oscuro para que las barras queden en segundo plano */
     font-size: 0.75rem;
     user-select: none;
+}
+
+/* RESPONSIVO: Ajuste automático para pantallas de móviles compactos */
+@media (max-width: 480px) {
+    .footer-links {
+        flex-direction: column; /* Coloca los enlaces en vertical */
+        gap: 10px;
+    }
+    .footer .separator {
+        display: none; /* Oculta las barras verticales cuando están uno debajo de otro */
+    }
 }
 
 /* ====================================================
