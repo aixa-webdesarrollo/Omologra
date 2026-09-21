@@ -669,6 +669,7 @@ h2.section-title {
 .form-legal-checkbox input[type="checkbox"] {
   margin-top: 3px;
   cursor: pointer;
+  accent-color: var(--primary-color, #005944);
 }
 
 /* El texto de "Acepto la política..." */
@@ -677,18 +678,24 @@ h2.section-title {
   line-height: 1.4;
   margin-left: 8px;
   cursor: pointer;
+  color: var(--dark-color, #1a1a1a);
 }
 
 /* El enlace que abre tu política en otra pestaña */
 .form-legal-checkbox a {
-  color: #0056b3; 
+  color: var(--primary-color); 
   text-decoration: underline;
+  font-weight: 600;
+}
+
+.form-legal-checkbox a:hover {
+    color: var(--secondary-color);
 }
 
 /* Recuadro contenedor de la coletilla RGPD */
 .form-legal-info {
-  background-color: #f9f9f9;
-  border: 1px solid #e0e0e0;
+  background-color: var(--light-color);
+  border: 1px solid rgba(0, 0, 0, 0.05);
   padding: 12px;
   border-radius: 4px;
   margin-bottom: 20px;
@@ -702,6 +709,9 @@ h2.section-title {
   margin: 0 0 6px 0;
 }
 
+.form-legal-info p strong {
+    color: var(--dark-color, #1a1a1a);
+}
 /* Lista de puntos informativos */
 .form-legal-info ul {
   margin: 0;
@@ -711,18 +721,33 @@ h2.section-title {
 
 /* Cada una de las líneas de información */
 .form-legal-info ul li {
-  font-size: 11px;
-  color: #666666;
-  line-height: 1.5;
-  margin-bottom: 4px;
+    font-size: 11px;
+    color: #666666;
+    line-height: 1.4;
+    margin-bottom: 3px;
 }
 
+.form-legal-info ul li strong {
+    color: var(--dark-color, #2c3e50);
+}
+
+.legal-data-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.legal-data-list li {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 8px;
+    color: var(--text-color);
+}
 /* Limpia el margen del último elemento de la lista */
 .form-legal-info ul li:last-child {
   margin-bottom: 0;
 }
 
-/* PIE DE PÁGINA (Estilo Corporativo y Limpio) */
 .footer {
     background-color: var(--dark-color); /* Tu verde noche oscuro */
     color: #a0aec0;                      /* Gris claro suave para el copyright */
