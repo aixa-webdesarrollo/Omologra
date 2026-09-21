@@ -439,32 +439,67 @@ h2.section-title {
 }
 
 /* ====================================================
-   ESTILOS PARA EL ACORDEÓN CON COLETILLA "VER RESPUESTA"
+   ESTILOS PARA EL ACORDEÓN EN 3 COLUMNAS COMPACTAS
    ==================================================== */
 .faqs-section {
     background-color: #ffffff;
-    padding: 50px 0;
+    padding: 40px 0; /* Espaciado externo más reducido */
 }
 
-.faqs-container {
-    max-width: 800px;
+/* El nuevo contenedor que alinea tus tres ".bloques" */
+.bloques-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Crea 3 columnas iguales */
+    gap: 25px; /* Espacio de separación entre las columnas */
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 15px;
+    align-items: start; /* Alinea los bloques arriba del todo */
+}
+
+/* Ajustes para cada uno de tus 3 bloques */
+.bloques {
+    width: 100%;
+}
+
+.bloques h3 {
+    color: var(--dark-color);
+    font-size: 1.05rem; /* Letra de títulos más pequeña y estilizada */
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* El contenedor vertical interno de las preguntas */
+.faqs-container {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 8px; /* Preguntas más pegadas entre sí */
+    border-left: 3px solid #095543; /* Línea de bloque vertical más sutil */
+    padding-left: 12px; /* Espacio interno más compacto */
 }
 
+/* Caja de cada pregunta individual */
 .faq-item {
     background-color: var(--light-color);
-    border-left: 4px solid var(--primary-color);
-    border-radius: 0 8px 8px 0;
-    padding: 16px 20px;
-    transition: background-color 0.3s ease;
+    border-left: 2px solid var(--primary-color); /* Borde interno más sutil */
+    border-radius: 4px; /* Esquinas suavizadas uniformes */
+    padding: 10px 12px; /* Reducción de los espacios internos */
+    transition: background-color 0.2s ease;
 }
 
+.faq-item:hover {
+    background-color: #f1f3f5; /* Reemplazar por un color si var(--light-color) no destaca */
+}
+
+/* Texto de la pregunta ajustado */
 .faq-question {
     color: var(--dark-color);
-    font-size: 1.1rem;
+    font-size: 0.88rem; /* Tamaño de letra más compacto */
     font-weight: 600;
     cursor: pointer;
     list-style: none;
@@ -472,41 +507,56 @@ h2.section-title {
     justify-content: space-between;
     align-items: center;
     outline: none;
+    line-height: 1.3;
     user-select: none;
 }
 
-/* Indicación visual interactiva (Flechita + Texto invisible por CSS) */
+/* Eliminar la flecha nativa de los navegadores */
+.faq-question::-webkit-details-marker {
+    display: none;
+}
+
+/* Coletilla de interacción compacta */
 .faq-question::after {
-    content: 'Ver respuesta  ▼'; /* Añadimos la coletilla de forma automática */
-    font-size: 0.8rem;
+    content: 'Ver ▼'; /* Acortado a "Ver ▼" para optimizar el espacio horizontal */
+    font-size: 0.75rem;
     font-weight: 500;
-    color: #8a9a95; /* Un gris verdoso muy suave y discreto para que no compita con el título */
+    color: #8a9a95; 
     white-space: nowrap;
-    margin-left: 15px;
-    transition: transform 0.2s ease, color 0.2s ease;
+    margin-left: 10px;
+    transition: color 0.2s ease;
 }
 
-/* Cuando el acordeón se abre: cambiamos el texto a "Cerrar" y giramos la flecha */
+/* Estado abierto */
 .faq-item[open] .faq-question::after {
-    content: 'Ocultar  ▲'; 
-    color: var(--secondary-color); /* Cambia a tu verde manzana vibrante para indicar que está activo */
+    content: 'Ocultar ▲'; 
+    color: var(--secondary-color); 
 }
 
+/* Interior de la respuesta abierta */
 .faq-answer {
-    margin-top: 12px;
-    padding-top: 12px;
+    margin-top: 8px;
+    padding-top: 8px;
     border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .faq-answer p {
     color: var(--text-color);
-    font-size: 0.95rem;
-    line-height: 1.6;
+    font-size: 0.82rem; /* Texto de respuesta proporcional al nuevo tamaño */
+    line-height: 1.5;
     margin: 0;
 }
 
 .faq-answer strong {
-    color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+/* RESPONSIVO: Pasa a 1 columna en tablets y móviles para evitar que se rompa el diseño */
+@media (max-width: 992px) {
+    .bloques-wrapper {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
 }
 
 /* ====================================================
