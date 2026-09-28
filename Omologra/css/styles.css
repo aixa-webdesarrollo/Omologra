@@ -931,3 +931,116 @@ h2.section-title {
     }
 }
 
+/* Estilos para las tablas en las páginas legales */
+.legal-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+}
+
+.legal-content th, .legal-content td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.legal-content th {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    font-family: var(--font-titles);
+    text-align: center;
+}
+
+.legal-content td {
+    color: var(--text-color);
+}
+
+.cookie-container {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 850px;
+    background-color: var(--light-color); /* Tu blanco hueso */
+    box-shadow: 0 4px 20px rgba(9, 85, 64, 0.15); /* Sombra suave con tu tono verde */
+    border-radius: 8px;
+    border: 1px solid rgba(9, 85, 64, 0.1);
+    padding: 20px;
+    z-index: 9999;
+}
+
+.cookie-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.cookie-content p {
+    font-size: 14px;
+    color: var(--text-color); /* Tu gris verdoso para lectura */
+    line-height: 1.5;
+    margin: 0;
+}
+
+.cookie-content p a {
+    color: var(--primary-color); /* Enlace a la política en tu verde corporativo */
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.cookie-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+/* Base común de botones */
+.cookie-btn {
+    font-family: var(--font-titles); /* Montserrat */
+    font-size: 13px;
+    font-weight: 600;
+    padding: 10px 22px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 2px solid transparent;
+}
+
+/* Botón Rechazar (Cumple la norma AEPD de igual importancia visual) */
+.cookie-btn.btn-reject {
+    background-color: transparent;
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.cookie-btn.btn-reject:hover {
+    background-color: rgba(9, 85, 64, 0.05);
+}
+
+/* Botón Aceptar con tu verde manzana vibrante */
+.cookie-btn.btn-accept {
+    background-color: var(--secondary-color);
+    color: #ffffff;
+}
+
+.cookie-btn.btn-accept:hover {
+    background-color: #3b824a; /* Tu verde bosque suavizado al pasar el cursor */
+}
+
+/* Adaptación responsive para móviles */
+@media (max-width: 600px) {
+    .cookie-container {
+        bottom: 10px;
+        width: 95%;
+        padding: 15px;
+    }
+    .cookie-buttons {
+        flex-direction: column; /* Apila botones en vertical en móviles */
+        width: 100%;
+    }
+    .cookie-btn {
+        width: 100%;
+        text-align: center;
+    }
+}

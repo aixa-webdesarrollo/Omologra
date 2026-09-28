@@ -13,7 +13,6 @@
 
 <body>
 
-<!-- CABECERA Y NAVEGACIÓN -->
 <header class="header">
     <div class="container navbar">
         <div class="logo">
@@ -29,10 +28,8 @@
     </div>
 </header>
 
-<!-- SECCIÓN HÉROE / INICIO -->
 <section id="inicio" class="hero">
     <div class="container hero-content">
-        <!-- Columna Izquierda: El Texto Informativo Legible -->
         <div class="hero-text">
             <h1>Mantenimiento y Reparación de Puertas y Automatismos</h1>
             <p>Asistencia técnica profesional, rápida y garantizada para particulares, comunidades y empresas en Granada. Solucionamos cualquier avería e instalación con repuestos de máxima calidad.</p>
@@ -70,7 +67,6 @@
     </div>
 </section>
 
-<!-- SECCIÓN DE COBERTURA -->
 <section id="cobertura" class="coverage">
     <div class="container">
         <h2 class="section-title">Zonas de Cobertura</h2>
@@ -95,12 +91,10 @@
     </div>
 </section>
 
-<!-- SECCIÓN DE PREGUNTAS FRECUENTES (FAQs) -->
 <section id="faqs" class="faqs-section">
     <div class="container">
         <h2 class="section-title">Preguntas Frecuentes y Normativa</h2>
         
-        <!-- Nuevo contenedor para activar las 3 columnas en CSS -->
         <div class="bloques-wrapper">
 
             <!-- BLOQUE 1 -->
@@ -188,7 +182,6 @@
     </div>
 </section>
 
-<!-- SECCIÓN DE CONTACTO -->
 <section id="contacto" class="contact">
     <div class="container">
         <h2 class="section-title">Solicitar Asistencia Técnica</h2>
@@ -237,7 +230,6 @@
     </div>
 </section>
 
-<!-- PIE DE PÁGINA -->
 <footer class="footer">
     <div class="container">
         <p>&copy; 2026 Omologra - Todos los derechos reservados.</p>
@@ -247,12 +239,24 @@
             <a href="politica-privacidad.html">Política de Privacidad</a>
             <span class="separator">|</span>
             <a href="politica-cookies.html">Política de Cookies</a>
+            <span class="separator">|</span>
+            <a href="normativa.html">Normativa Mantenimiendo Puertas</a>
         </div>
     </div>
 </footer>
-
-<!-- BOTÓN VOLVER ARRIBA -->
     <a href="#inicio" class="scroll-to-top" aria-label="Volver al inicio">▲</a>
 
+    <!-- Banner de Consentimiento de Cookies -->
+<div id="cookie-banner" class="cookie-container" style="display: none;">
+    <div class="cookie-content">
+        <p>Utilizamos cookies propias y de terceros para asegurar el correcto funcionamiento de la web, analizar tu navegación y mejorar tu experiencia. Puedes aceptar todas las cookies pulsando el botón "Aceptar" o rechazar su uso configurando tus preferencias. Para más información, consulta nuestra <a href="politica-cookies.html">Política de Cookies</a>.</p>
+        <div class="cookie-buttons">
+            <button id="btn-reject-cookies" class="cookie-btn btn-reject">Rechazar</button>
+            <button id="btn-accept-cookies" class="cookie-btn btn-accept">Aceptar</button>
+        </div>
+    </div>
+</div>
+
+<script src="js/script.js"></script>
 </body>
 </html>
