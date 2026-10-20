@@ -25,6 +25,7 @@
         <nav class="nav">
           <a href="#inicio">Inicio</a>
           <a href="#servicios">Servicios</a>
+          <a href="#motores">Motores</a>
           <a href="#cobertura">Cobertura</a>
           <a href="#faqs">Preguntas frecuentes</a>
           <a href="#contacto" class="btn-nav">Solicitar Técnico</a>
@@ -87,6 +88,113 @@
             </p>
           </div>
         </div>
+      </div>
+    </section>
+
+            <!-- SECCIÓN DE MOTORES Y AUTOMATISMOS (CORREGIDA COMPLETA) -->
+    <section id="motores" class="motores-section">
+      <div class="container">
+        <h2 class="section-title">Motores y Automatismos Oficiales</h2>
+        <p class="section-subtitle">Trabajamos exclusivamente con fabricantes líderes para garantizar instalaciones robustas, silenciosas y duraderas.</p>
+        
+        <!-- Filtros de Marca -->
+        <div class="motores-filtros-contenedor">
+          
+          <!-- Fila Superior: Botón general -->
+          <div class="fila-filtro-superior">
+            <button class="btn-filtro active" onclick="filtrarMotores('todos')">
+              <span class="btn-leyenda">Todos los Motores</span>
+            </button>
+          </div>    
+          
+          <!-- Fila Inferior: Botones alineados horizontalmente -->
+          <div class="fila-filtro-inferior">
+            <!-- Botón DEA -->
+            <button class="btn-filtro" onclick="filtrarMotores('dea')">
+              <div class="btn-logo-container logo-dea-bg">
+                <img src="img/DeaLogo.png" alt="Logo DEA" class="btn-logo-img">
+              </div>
+              <span class="btn-leyenda">Motores DEA</span>
+            </button>
+
+            <!-- Botón Nice -->
+            <button class="btn-filtro" onclick="filtrarMotores('nice')">
+              <div class="btn-logo-container logo-nice-bg">
+                <img src="img/NiceLogo.png" alt="Logo Nice" class="btn-logo-img">
+              </div>
+              <span class="btn-leyenda">Motores Nice</span>
+            </button>
+          </div> <!-- Fin fila inferior -->
+
+        </div>
+
+        <!-- Cuadrícula de Productos -->
+        <div class="motores-grid">
+          <!-- Motor 1: DEA Corredera -->
+          <div class="motor-card" data-marca="dea">
+            <div class="badge-marca marca-dea">
+              <img src="img/DeaLogo.png" alt="Logo DEA" class="logo-marca-img">
+            </div>
+            <div class="motor-img-placeholder">📦 Imagen Motor DEA Corredera</div>
+            <div class="motor-info">
+              <h3>DEA Livi 6N (400-600kg)</h3>
+              <p>Automatismo profesional para puertas correderas residenciales. Incorpora cuadro de maniobras digital y detección de obstáculos.</p>
+              <div class="motor-footer">
+                <span class="motor-precio">365,00€</span>
+                <a href="https://stripe.com" class="btn-comprar" target="_blank">Comprar</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Motor 2: Nice Seccional -->
+          <div class="motor-card" data-marca="nice">
+            <div class="badge-marca marca-nice">
+              <img src="img/NiceLogo.png" alt="Logo Nice" class="logo-marca-img">
+            </div>
+            <div class="motor-img-placeholder">📦 Imagen Motor Nice Seccional</div>
+            <div class="motor-info">
+              <h3>Nice Spinbus kit 23</h3>
+              <p>Ideal para puertas seccionales y basculantes de garaje. Tracción por correa muy silenciosa, aceleración y deceleración regulables.</p>
+              <div class="motor-footer">
+                <span class="motor-precio">295,00€</span>
+                <a href="https://stripe.com" class="btn-comprar" target="_blank">Comprar</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Motor 3: DEA Batiente -->
+          <div class="motor-card" data-marca="dea">
+            <div class="badge-marca marca-dea">
+              <img src="img/DeaLogo.png" alt="Logo DEA" class="logo-marca-img">
+            </div>
+            <div class="motor-img-placeholder">📦 Imagen Motor DEA Batiente</div>
+            <div class="motor-info">
+              <h3>DEA Mac (Batiente)</h3>
+              <p>Pistón electromecánico robusto para puertas batientes de hasta 3 metros por hoja. Diseño compacto y materiales de alta resistencia.</p>
+              <div class="motor-footer">
+                <span class="motor-precio">410,00€</span>
+                <a href="https://stripe.com" class="btn-comprar" target="_blank">Comprar</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Motor 4: Nice Corredera -->
+          <div class="motor-card" data-marca="nice">
+            <div class="badge-marca marca-nice">
+              <img src="img/NiceLogo.png" alt="Logo Nice" class="logo-marca-img">
+            </div>
+            <div class="motor-img-placeholder">📦 Imagen Motor Nice Corredera</div>
+            <div class="motor-info">
+              <h3>Nice Robus 400</h3>
+              <p>Motor inteligente para puertas correderas de hasta 400kg con tecnología BlueBUS. Permite conexión de baterías de emergencia.</p>
+              <div class="motor-footer">
+                <span class="motor-precio">389,00€</span>
+                <a href="https://stripe.com" class="btn-comprar" target="_blank">Comprar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
 

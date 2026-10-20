@@ -22,3 +22,20 @@ document.addEventListener("DOMContentLoaded", function () {
             // No se instala ninguna cookie de rastreo
         });
     });
+
+    function filtrarMotores(marca) {
+  // Actualizar clases activas en los botones
+  const botones = document.querySelectorAll('.btn-filtro');
+  botones.forEach(btn => btn.classList.remove('active'));
+  event.target.classList.add('active');
+
+  // Filtrar tarjetas
+  const tarjetas = document.querySelectorAll('.motor-card');
+  tarjetas.forEach(tarjeta => {
+    if (marca === 'todos' || tarjeta.getAttribute('data-marca') === marca) {
+      tarjeta.style.display = 'flex';
+    } else {
+      tarjeta.style.display = 'none';
+    }
+  });
+}

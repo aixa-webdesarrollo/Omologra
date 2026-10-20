@@ -193,7 +193,7 @@ h2.section-title {
     padding: 3px 10px; /* Altura mínima y anchura muy contenida */
     font-size: 10px; /* Letra pequeña, fina y discreta */
     text-decoration: none; /* Quita el subrayado del enlace */
-    border-radius: 4px; /* Bordes redondeados más sutiles para un botón pequeño */
+    border-radius: 15px; /* Bordes redondeados más sutiles para un botón pequeño */
     transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease !important;
 }
 
@@ -1043,4 +1043,270 @@ h2.section-title {
         width: 100%;
         text-align: center;
     }
+}
+
+/* ==========================================================================
+   SECCIÓN DE MOTORES Y AUTOMATISMOS (CON TU PALETA CORPORATIVA)
+   ========================================================================== */
+
+.motores-section {
+  padding: 60px 0;
+  background-color: var(--light-color); /* Blanco lino/hueso de fondo */
+  font-family: var(--font-body);
+}
+
+/* Título de la sección en tu verde corporativo */
+.motores-section .section-title {
+  font-family: var(--font-titles);
+  color: var(--primary-color); 
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+}
+
+.motores-section .section-subtitle {
+  text-align: center;
+  color: var(--text-color); /* Gris verdoso corporativo */
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* --- Contenedor de Filtros en Dos Niveles --- */
+.motores-filtros-contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 50px;
+  width: 100%;
+}
+
+.fila-filtro-superior {
+  display: flex;
+  justify-content: center;
+}
+
+/* Fila Inferior perfectamente alineada horizontalmente */
+.fila-filtro-inferior {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+}
+
+.btn-filtro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  transition: transform 0.2s ease;
+}
+
+.btn-filtro:hover {
+  transform: translateY(-3px);
+}
+
+/* Botón Superior "Todos los Motores" */
+.fila-filtro-superior .btn-filtro {
+  background-color: transparent;
+  border: 2px solid var(--primary-color);
+  padding: 10px 24px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.fila-filtro-superior .btn-filtro .btn-leyenda {
+  color: var(--primary-color);
+}
+
+.fila-filtro-superior .btn-filtro.active {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+.fila-filtro-superior .btn-filtro.active .btn-leyenda {
+  color: #ffffff;
+}
+
+/* Contenedor del Logo de las Marcas */
+.btn-logo-container {
+  padding: 14px 28px;
+  border-radius: 8px;
+  background-color: #ffffff; 
+  border: 1px solid rgba(18, 34, 29, 0.06); 
+  border-top: 4px solid var(--primary-color); 
+  box-shadow: 0 6px 18px rgba(18, 34, 29, 0.04); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.btn-logo-img {
+  height: 38px;
+  width: auto;
+  object-fit: contain;
+}
+
+.btn-leyenda {
+  font-family: var(--font-titles);
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
+
+/* Estados Activos para Filtros de Marcas */
+.fila-filtro-inferior .btn-filtro.active .btn-logo-container {
+  /* Cuando está activo, la línea superior cambia a tu verde manzana vibrante */
+  border-top-color: var(--secondary-color) !important; 
+  box-shadow: 0 6px 20px rgba(78, 175, 71, 0.15);
+  transform: translateY(-2px);
+}
+
+.fila-filtro-inferior .btn-filtro.active .btn-leyenda {
+  color: var(--dark-color);
+}
+
+/* --- Grid y Tarjetas de Producto --- */
+.motores-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 35px;
+}
+
+/* MODIFICADO: Aplicamos el Patrón Superior a la tarjeta de producto */
+.motor-card {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(18, 34, 29, 0.06);
+  border-top: none !important;
+  border-left: 6px solid var(--primary-color) !important; 
+  box-shadow: 0 6px 18px rgba(18, 34, 29, 0.04);
+}
+
+.motor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(18, 34, 29, 0.08);
+  border-left-color: var(--secondary-color); 
+}
+
+.badge-marca {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff; 
+  border: 1px solid rgba(18, 34, 29, 0.06);
+  border-top: 2px solid var(--primary-color);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+/* ELIMINADOS los antiguos fondos pesados azul y gris */
+.marca-dea, .marca-nice { 
+  background-color: #ffffff; 
+}
+
+.logo-marca-img {
+  height: 24px; /* Un tamaño un poco más estilizado para el badge */
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* Contenedor temporal de la imagen */
+.motor-img-placeholder {
+  width: 100%;
+  height: 220px;
+  background-color: #edf1ee; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-color);
+  font-size: 0.9rem;
+}
+
+.motor-info {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.motor-info h3 {
+  font-family: var(--font-titles);
+  color: var(--dark-color);
+  margin: 0 0 12px 0;
+  font-size: 1.3rem;
+}
+
+.motor-info p {
+  color: var(--text-color);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+
+/* Footer de la tarjeta */
+.motor-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  border-top: 1px solid rgba(18, 34, 29, 0.06);
+  padding-top: 15px;
+}
+
+.motor-precio {
+  font-family: var(--font-titles);
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--dark-color);
+}
+
+/* Botón de Compra Verde Manzana Vibrante */
+.btn-comprar {
+  background-color: var(--secondary-color); 
+  color: #ffffff;
+  font-family: var(--font-titles);
+  text-decoration: none;
+  padding: 10px 22px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease;
+}
+
+.btn-comprar:hover {
+  background-color: #3f9639; /* Un tono ligeramente más oscuro para el hover */
+}
+
+/* Adaptación para pantallas móviles */
+@media (max-width: 500px) {
+  .fila-filtro-inferior {
+    gap: 15px;
+  }
+  .btn-logo-container {
+    padding: 10px 20px;
+  }
+  .btn-logo-img {
+    height: 30px;
+  }
 }
