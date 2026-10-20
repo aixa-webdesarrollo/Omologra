@@ -91,7 +91,7 @@
       </div>
     </section>
 
-            <!-- SECCIÓN DE MOTORES Y AUTOMATISMOS (CORREGIDA COMPLETA) -->
+    <!-- SECCIÓN DE MOTORES Y AUTOMATISMOS (CORREGIDA COMPLETA) -->
     <section id="motores" class="motores-section">
       <div class="container">
         <h2 class="section-title">Motores y Automatismos Oficiales</h2>
@@ -129,7 +129,9 @@
         </div>
 
         <!-- Cuadrícula de Productos -->
+                <!-- Cuadrícula de Productos (Formato Catálogo 3 por fila) -->
         <div class="motores-grid">
+          
           <!-- Motor 1: DEA Corredera -->
           <div class="motor-card" data-marca="dea">
             <div class="badge-marca marca-dea">
@@ -138,10 +140,9 @@
             <div class="motor-img-placeholder">📦 Imagen Motor DEA Corredera</div>
             <div class="motor-info">
               <h3>DEA Livi 6N (400-600kg)</h3>
-              <p>Automatismo profesional para puertas correderas residenciales. Incorpora cuadro de maniobras digital y detección de obstáculos.</p>
+              <p>Automatismo profesional para puertas correderas residenciales. Incorpora cuadro de maniobras digital, gestión de velocidad y detección de obstáculos mediante encoder.</p>
               <div class="motor-footer">
-                <span class="motor-precio">365,00€</span>
-                <a href="https://stripe.com" class="btn-comprar" target="_blank">Comprar</a>
+                <button class="btn-comprar" onclick="irAContacto('DEA Livi 6N')">Solicitar Presupuesto</button>
               </div>
             </div>
           </div>
@@ -154,15 +155,14 @@
             <div class="motor-img-placeholder">📦 Imagen Motor Nice Seccional</div>
             <div class="motor-info">
               <h3>Nice Spinbus kit 23</h3>
-              <p>Ideal para puertas seccionales y basculantes de garaje. Tracción por correa muy silenciosa, aceleración y deceleración regulables.</p>
+              <p>Ideal para puertas seccionales y basculantes de garaje. Sistema de tracción por correa silenciosa, aceleración y deceleración regulables en apertura y cierre.</p>
               <div class="motor-footer">
-                <span class="motor-precio">295,00€</span>
-                <a href="https://stripe.com" class="btn-comprar" target="_blank">Comprar</a>
+                <button class="btn-comprar" onclick="irAContacto('Nice Spinbus kit 23')">Solicitar Presupuesto</button>
               </div>
             </div>
           </div>
 
-          <!-- Motor 3: DEA Batiente -->
+          <!-- Motor 3: DEA Batiente (Mac) -->
           <div class="motor-card" data-marca="dea">
             <div class="badge-marca marca-dea">
               <img src="img/DeaLogo.png" alt="Logo DEA" class="logo-marca-img">
@@ -170,10 +170,9 @@
             <div class="motor-img-placeholder">📦 Imagen Motor DEA Batiente</div>
             <div class="motor-info">
               <h3>DEA Mac (Batiente)</h3>
-              <p>Pistón electromecánico robusto para puertas batientes de hasta 3 metros por hoja. Diseño compacto y materiales de alta resistencia.</p>
+              <p>Pistón electromecánico robusto para puertas batientes de hasta 3 metros por hoja. Fabricado con materiales de alta resistencia ideales para un uso continuo.</p>
               <div class="motor-footer">
-                <span class="motor-precio">410,00€</span>
-                <a href="https://stripe.com" class="btn-comprar" target="_blank">Comprar</a>
+                <button class="btn-comprar" onclick="irAContacto('DEA Mac')">Solicitar Presupuesto</button>
               </div>
             </div>
           </div>
@@ -186,15 +185,43 @@
             <div class="motor-img-placeholder">📦 Imagen Motor Nice Corredera</div>
             <div class="motor-info">
               <h3>Nice Robus 400</h3>
-              <p>Motor inteligente para puertas correderas de hasta 400kg con tecnología BlueBUS. Permite conexión de baterías de emergencia.</p>
+              <p>Motor inteligente para puertas correderas de hasta 400kg. Equipado con tecnología BlueBUS que facilita la conexión de accesorios y baterías de emergencia.</p>
               <div class="motor-footer">
-                <span class="motor-precio">389,00€</span>
-                <a href="https://stripe.com" class="btn-comprar" target="_blank">Comprar</a>
+                <button class="btn-comprar" onclick="irAContacto('Nice Robus 400')">Solicitar Presupuesto</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- NUEVO - Motor 5: DEA Batiente (Look) -->
+          <div class="motor-card" data-marca="dea">
+            <div class="badge-marca marca-dea">
+              <img src="img/DeaLogo.png" alt="Logo DEA" class="logo-marca-img">
+            </div>
+            <div class="motor-img-placeholder">📦 Imagen Motor DEA Look</div>
+            <div class="motor-info">
+              <h3>DEA Look (Batiente Premium)</h3>
+              <p>Automatismo telescópico para puertas batientes de hasta 5 metros. Diseño elegante, carrera larga y máxima fiabilidad para cancelas residenciales e industriales.</p>
+              <div class="motor-footer">
+                <button class="btn-comprar" onclick="irAContacto('DEA Look')">Solicitar Presupuesto</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- NUEVO - Motor 6: Nice Batiente (Toona) -->
+          <div class="motor-card" data-marca="nice">
+            <div class="badge-marca marca-nice">
+              <img src="img/NiceLogo.png" alt="Logo Nice" class="logo-marca-img">
+            </div>
+            <div class="motor-img-placeholder">📦 Imagen Motor Nice Toona</div>
+            <div class="motor-info">
+              <h3>Nice Toona 4</h3>
+              <p>Motorreductor electromecánico de montaje exterior para puertas batientes de hasta 3 metros. Carcasa de aluminio en dos piezas para una resistencia óptima a la intemperie.</p>
+              <div class="motor-footer">
+                <button class="btn-comprar" onclick="irAContacto('Nice Toona 4')">Solicitar Presupuesto</button>
               </div>
             </div>
           </div>
         </div>
-
       </div>
     </section>
 
@@ -408,12 +435,11 @@
       </div>
     </section>
 
-    <section id="contacto" class="contact">
+    <section id="contacto" class="contacto-section">
       <div class="container">
-        <h2 class="section-title">Solicitar Asistencia Técnica</h2>
-        <p class="contact-subtitle">
-          Rellena el formulario y un técnico se pondrá en contacto contigo
-          enseguida.
+        <h2 id="contacto-titulo" class="section-title">Solicitar Asistencia Técnica</h2>
+        <p id="contacto-texto" class="section-subtitle">
+          Déjanos tus datos y nos pondremos en contacto contigo a la mayor brevedad para solucionar cualquier incidencia en tus puertas automáticas.
         </p>
 
         <form action="https://formsubmit.co/comercial@omologra.com" method="POST" class="contact-form">

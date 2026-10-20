@@ -1177,8 +1177,11 @@ h2.section-title {
 /* --- Grid y Tarjetas de Producto --- */
 .motores-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 35px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1080px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 /* MODIFICADO: Aplicamos el Patrón Superior a la tarjeta de producto */
@@ -1194,6 +1197,9 @@ h2.section-title {
   border-top: none !important;
   border-left: 6px solid var(--primary-color) !important; 
   box-shadow: 0 6px 18px rgba(18, 34, 29, 0.04);
+  max-width: 310px;
+  width: 100%;
+  margin: 0 auto; /* Centrado automático en la grilla */
 }
 
 .motor-card:hover {
@@ -1233,17 +1239,19 @@ h2.section-title {
 /* Contenedor temporal de la imagen */
 .motor-img-placeholder {
   width: 100%;
-  height: 220px;
+  height: 150px;
   background-color: #edf1ee; 
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--text-color);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
+  object-fit: contain;
+  padding: 10px;
 }
 
 .motor-info {
-  padding: 24px;
+  padding: 16px 18px;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -1252,50 +1260,49 @@ h2.section-title {
 .motor-info h3 {
   font-family: var(--font-titles);
   color: var(--dark-color);
-  margin: 0 0 12px 0;
-  font-size: 1.3rem;
+  margin: 0 0 6px 0;
+  font-size: 1.1rem;
+  line-height: 1.3;
 }
 
 .motor-info p {
   color: var(--text-color);
-  font-size: 0.95rem;
-  line-height: 1.5;
-  margin-bottom: 24px;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin-bottom: 16px;
   flex-grow: 1;
 }
 
 /* Footer de la tarjeta */
 .motor-footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   margin-top: auto;
   border-top: 1px solid rgba(18, 34, 29, 0.06);
-  padding-top: 15px;
+  padding-top: 12px;
+  width: 100%;
 }
 
-.motor-precio {
-  font-family: var(--font-titles);
-  font-size: 1.4rem;
-  font-weight: bold;
-  color: var(--dark-color);
-}
-
-/* Botón de Compra Verde Manzana Vibrante */
 .btn-comprar {
   background-color: var(--secondary-color); 
   color: #ffffff;
   font-family: var(--font-titles);
   text-decoration: none;
-  padding: 10px 22px;
+  cursor: pointer;
+  padding: 9px 0;
   border-radius: 6px;
   font-weight: bold;
-  font-size: 0.95rem;
-  transition: background-color 0.2s ease;
+  font-size: 0.85rem;
+  text-align: center;
+  width: 100%;
+  display: block;
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .btn-comprar:hover {
-  background-color: #3f9639; /* Un tono ligeramente más oscuro para el hover */
+  background-color: #3f9639; 
+  transform: translateY(-1px);
 }
 
 /* Adaptación para pantallas móviles */

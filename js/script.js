@@ -39,3 +39,39 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 }
+
+function irAContacto(nombreMotor) {
+    // 1. Elementos del formulario
+    const titulo = document.getElementById('contacto-titulo');
+    const subtitulo = document.getElementById('contacto-texto');
+
+    // 2. Cambiar textos para la solicitud de presupuesto
+    if (titulo) {
+        titulo.innerText = "Solicitar Presupuesto para Automatismo";
+    }
+    if (subtitulo) {
+        subtitulo.innerText = `Cuéntanos más sobre tu proyecto para el motor ${nombreMotor}. Te enviaremos una valoración a medida lo antes posible.`;
+    }
+
+    // 3. Desplazamiento suave hacia la sección de contacto
+    const seccionContacto = document.getElementById('contacto');
+    if (seccionContacto) {
+        seccionContacto.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+
+// Restablecer los textos originales si el usuario vuelve a subir haciendo scroll
+window.addEventListener('scroll', function() {
+    // Si el usuario sube y se queda cerca de la parte superior de la página (menos de 400px)
+    if (window.scrollY < 400) {
+        const titulo = document.getElementById('contacto-titulo');
+        const subtitulo = document.getElementById('contacto-texto');
+
+        if (titulo && titulo.innerText !== "Solicitar Asistencia Técnica") {
+            titulo.innerText = "Solicitar Asistencia Técnica";
+        }
+        if (subtitulo && !subtitulo.innerText.includes("Déjanos tus datos y nos pondremos")) {
+            subtitulo.innerText = "Déjanos tus datos y nos pondremos en contacto contigo a la mayor brevedad para solucionar cualquier incidencia en tus puertas automáticas.";
+        }
+    }
+});
