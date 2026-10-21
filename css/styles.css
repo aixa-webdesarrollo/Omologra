@@ -1246,8 +1246,14 @@ h2.section-title {
   justify-content: center;
   color: var(--text-color);
   font-size: 0.85rem;
-  object-fit: contain;
   padding: 10px;
+  box-sizing: border-box;
+}
+
+.motor-img-placeholder img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 }
 
 .motor-info {
@@ -1290,7 +1296,7 @@ h2.section-title {
   font-family: var(--font-titles);
   text-decoration: none;
   cursor: pointer;
-  padding: 9px 0;
+  padding: 9px 5px;
   border-radius: 6px;
   font-weight: bold;
   font-size: 0.85rem;
@@ -1305,6 +1311,24 @@ h2.section-title {
   transform: translateY(-1px);
 }
 
+#contacto {
+    scroll-margin-top: 180px;
+    padding-top: 20px;
+}
+
+#contacto-titulo {
+    margin-top: 0px;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+#contacto-texto {
+    margin-top: 0px;
+    margin-bottom: 30px;
+    text-align: center;
+    padding: 0 20px;
+}
+
 /* Adaptación para pantallas móviles */
 @media (max-width: 500px) {
   .fila-filtro-inferior {
@@ -1315,5 +1339,21 @@ h2.section-title {
   }
   .btn-logo-img {
     height: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  
+  /* 1. Pasamos el catálogo de 3 columnas a 1 sola columna */
+  .motores-grid {
+    grid-template-columns: 1fr; /* Una tarjeta por fila */
+    gap: 20px;                  /* Separación vertical entre tarjetas */
+    padding: 0 15px;            /* Evita que las tarjetas toquen los bordes del móvil */
+  }
+
+  /* 2. Ajustes para que la tarjeta respire bien en el móvil */
+  .motor-card {
+    max-width: 100%;            /* Permite que use el ancho disponible de la pantalla */
+    width: 100%;
   }
 }
