@@ -1357,3 +1357,60 @@ h2.section-title {
     width: 100%;
   }
 }
+
+/* ========================================================
+   CORRECCIÓN DEFINITIVA PARA EL MENÚ MÓVIL (ESTRUCTURA REAL)
+   ======================================================== */
+@media (max-width: 767px) {
+
+    /* 1. Alineamos de arriba a abajo el Bloque del Logo y la caja Nav */
+    .navbar {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        padding: 10px 0 !important;
+        width: 100% !important;
+    }
+
+    /* Reducimos la altura del logotipo */
+    .logo-img {
+        max-height: 40px !important;
+        height: 40px !important;
+        width: auto !important;
+        margin-bottom: 8px !important;
+    }
+
+    /* 2. REESTRUCTURACIÓN DEL NAV: Creamos una cuadrícula de dos niveles */
+    .nav {
+        display: grid !important;
+        /* El primer piso se divide en 5 columnas iguales para los enlaces de texto */
+        grid-template-columns: repeat(5, 1fr) !important; 
+        gap: 6px !important; /* Espacio mínimo y compacto entre las palabras */
+        width: 100% !important;
+        text-align: center !important;
+        padding: 0 10px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Estilo exclusivo para los 5 enlaces de texto */
+    .nav a:not(.btn-nav) {
+        display: block !important;
+        font-size: 0.75rem !important; /* Letra compacta ideal para que quepan todos */
+        white-space: nowrap !important;
+        padding: 4px 0 !important;
+    }
+
+    /* 3. EL TRUCO PARA EL BOTÓN: Lo obligamos a saltar abajo y ocupar todo el ancho */
+    .nav a.btn-nav {
+        grid-column: 1 / span 5 !important; /* Le ordena ocupar las 5 columnas, bajando al piso inferior */
+        justify-self: center !important;     /* Centra el botón horizontalmente */
+        display: inline-block !important;
+        width: auto !important;
+        min-width: 160px !important;         /* Evita que se vea demasiado pequeño */
+        padding: 8px 16px !important;
+        margin-top: 10px !important;         /* Lo separa elegantemente de las palabras superiores */
+        font-size: 0.85rem !important;
+        border-radius: 6px !important;
+        white-space: nowrap !important;
+    }
+}
