@@ -144,7 +144,9 @@ h2.section-title {
     /* Cambia la cabecera a vertical para que quepa todo */
     .navbar {
         flex-direction: column;
-        gap: 12px;
+        justify-content: center;
+        align-items: center;
+        gap: 14px;
         padding: 12px 10px;
     }
 
@@ -158,8 +160,9 @@ h2.section-title {
     .nav {
         width: 100%;
         display: grid;
-        grid-template-columns: repeat(4, 1fr); /* Divide los 4 enlaces normales en filas iguales */
-        gap: 6px;
+        grid-template-columns: repeat(3, 1fr); /* Divide los 4 enlaces normales en filas iguales */
+        gap: 8px;
+        justify-content: center;
         text-align: center;
     }
 
@@ -174,7 +177,7 @@ h2.section-title {
 
     /* El botón de acción "Solicitar Técnico" ocupa todo el ancho abajo */
     .nav .btn-nav {
-        grid-column: span 4; /* Se estira a lo largo de las 4 columnas abajo del todo */
+        grid-column: span 3; /* Se estira a lo largo de las 4 columnas abajo del todo */
         font-size: 14px;
         padding: 12px;
         margin-top: 4px;
@@ -752,9 +755,37 @@ h2.section-title {
     background-color: var(--dark-color); /* Tu verde noche oscuro */
     color: #a0aec0;                      /* Gris claro suave para el copyright */
     text-align: center;
-    padding: 25px 0;
+    padding: 35px 0 25px 0;
     font-size: 0.8rem;
     border-top: 3px solid var(--primary-color); /* Fina línea superior en tu verde principal */
+}
+
+.footer-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 25px;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #a0aec0;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    padding: 4px 8px;
+}
+
+.contact-item i {
+    color: var(--secondary-color); /* Iconos en tu verde corporativo */
+    font-size: 0.9rem;
+}
+
+.contact-item:hover {
+    color: white !important;
 }
 
 .footer-links {
@@ -788,11 +819,23 @@ h2.section-title {
 }
 
 /* RESPONSIVO: Ajuste automático para pantallas de móviles compactos */
+@media (max-width: 768px) {
+    /* Los tres elementos de contacto se ordenan en vertical */
+    .footer-contact {
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+        margin-bottom: 20px;
+    }
+}
+
+/* Ajuste automático para pantallas de móviles compactos (Tu regla original optimizada) */
 @media (max-width: 480px) {
     .footer-links {
         flex-direction: column; /* Coloca los enlaces en vertical */
-        gap: 10px;
+        gap: 12px;              /* Un poquito más de separación táctil para evitar clics erróneos */
     }
+    
     .footer .separator {
         display: none; /* Oculta las barras verticales cuando están uno debajo de otro */
     }

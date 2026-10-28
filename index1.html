@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Servicios Técnicos y de Mantenimiento | Omologra</title>
+    <link rel="icon" href="img/favicon-sf.png" type="image/png" sizes="32x32" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles1.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container navbar">
+        <div class="logo">
+          <a href="#inicio"
+            ><img src="img/logo-Omologra.png" alt="Logotipo" class="logo-img"
+          /></a>
+        </div>
+        <nav class="nav">
+          <a href="#inicio">Inicio</a>
+          <a href="#servicios">Servicios</a>
+          <a href="#motores">Motores</a>
+          <a href="#cobertura">Cobertura</a>
+          <a href="#soporte">Soporte</a>
+          <a href="#contacto" class="btn-nav">Solicitar Técnico</a>
+        </nav>
+      </div>
+    </header>
+
+    <section id="inicio" class="hero">
+      <div class="container hero-content">
+        <div class="hero-text">
+          <h1>Mantenimiento y Reparación de Puertas y Automatismos</h1>
+          <p>
+            Asistencia técnica profesional, rápida y garantizada para particulares, comunidades y empresas en Granada. Solucionamos cualquier avería e instalación con repuestos de máxima calidad.
+          </p>
+          <div class="hero-buttons">
+            <a href="#contacto" class="btn-primary">Pedir Presupuesto</a>
+            <a href="tel:+34651934114" class="btn-secondary">📞 Llamar Ahora</a>
+          </div>
+        </div>
+
+        <div class="hero-image">
+          <img
+            src="img/reparacion.jpg"
+            alt="Mantenimiento de puertas automáticas en Granada"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN DE SERVICIOS -->
+    <section id="servicios" class="services">
+      <div class="container">
+        <h2 class="section-title">Nuestros Servicios</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <h3>Mantenimiento Preventivo</h3>
+            <p>
+              Revisiones periódicas y puestas a punto de componentes mecánicos y electrónicos. Aseguramos el cumplimiento de la normativa vigente de seguridad y evitamos paradas inesperadas o averías costosas.
+            </p>
+          </div>
+          <div class="service-card">
+            <h3>Reparaciones</h3>
+            <p>
+              Asistencia técnica especializada para solucionar cualquier fallo o bloqueo en puertas automáticas y motores. Diagnosticamos y reparamos con rapidez utilizando repuestos originales de máxima fiabilidad.
+            </p>
+          </div>
+          <div class="service-card">
+            <h3>Instalaciones</h3>
+            <p>
+              Montaje, motorización y configuración de todo tipo de puertas y automatismos. Trabajamos con fabricantes líderes para garantizar instalaciones robustas, silenciosas y con marcado CE.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN DE MOTORES Y AUTOMATISMOS (CORREGIDA COMPLETA) -->
+    <section id="motores" class="motores-section">
+      <div class="container">
+        <h2 class="section-title">Motores y Automatismos Oficiales</h2>
+        <p class="section-subtitle">Trabajamos exclusivamente con fabricantes líderes para garantizar instalaciones robustas, silenciosas y duraderas.</p>
+        
+        <!-- Filtros de Marca -->
+        <div class="motores-filtros-contenedor">
+          
+          <!-- Fila Superior: Botón general -->
+          <div class="fila-filtro-superior">
+            <button class="btn-filtro active" onclick="filtrarMotores('todos')">
+              <span class="btn-leyenda">Todos los Motores</span>
+            </button>
+          </div>    
+          
+          <!-- Fila Inferior: Botones alineados horizontalmente -->
+          <div class="fila-filtro-inferior">
+            <!-- Botón DEA -->
+            <button class="btn-filtro" onclick="filtrarMotores('dea')">
+              <div class="btn-logo-container logo-dea-bg">
+                <img src="img/DeaLogo.png" alt="Logo DEA" class="btn-logo-img">
+              </div>
+              <span class="btn-leyenda">Motores DEA</span>
+            </button>
+
+            <!-- Botón Nice -->
+            <button class="btn-filtro" onclick="filtrarMotores('nice')">
+              <div class="btn-logo-container logo-nice-bg">
+                <img src="img/NiceLogo.png" alt="Logo Nice" class="btn-logo-img">
+              </div>
+              <span class="btn-leyenda">Motores Nice</span>
+            </button>
+          </div> <!-- Fin fila inferior -->
+
+        </div>
+      
+    <!-- Cuadrícula de Productos (Formato Catálogo 3 por fila) -->
+        <div class="motores-grid">
+  
+          <div class="motor-card" data-marca="dea">
+            <div class="badge-marca marca-dea">
+              <img src="img/DeaLogo.png" alt="Logo DEA" class="logo-marca-img">
+            </div>
+            <div class="motor-img-placeholder"> <img src="img/DeaLivi4.png" alt="Motor DeaLivi4"> 
+            </div>
+            <div class="motor-info">
+              <h3>DEA Livi 4 </h3>
+              <p>Automatismo para puertas correderas residenciales de hasta 400 kg. Diseño compacto, funcionamiento silencioso y máxima fiabilidad. Cuadro de maniobras integrado,  regulación de fuerza y sistema de seguridad avanzado.</p>
+              <div class="motor-footer">
+                <button class="btn-comprar" onclick="irAContacto('DEA Livi 4')">Solicitar Presupuesto</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="motor-card" data-marca="nice">
+            <div class="badge-marca marca-nice">
+              <img src="img/NiceLogo.png" alt="Logo Nice" class="logo-marca-img">
+            </div>
+            <div class="motor-img-placeholder">
+              <img src="img/NiceRoad-400.png" alt="Motor Nice Road 400"></div>
+            <div class="motor-info">
+              <h3>Nice Road 400</h3>
+              <p>Ideal para puertas correderas residenciales de hasta 400 kg. Sistema inteligente de detección de obstáculos, autoaprendizaje de recorridos y funcionamiento regulables en apertura y cierre.</p>
+              <div class="motor-footer">
+                <button class="btn-comprar" onclick="irAContacto('Nice Road 400')">Solicitar Presupuesto</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Motor 4: Nice Corredera -->
+          <div class="motor-card" data-marca="dea">
+            <div class="badge-marca marca-dea">
+              <img src="img/DeaLogo.png" alt="Logo DEA" class="logo-marca-img">
+            </div>
+            <div class="motor-img-placeholder">
+              <img src="img/TEO-700.png" alt="Motor Nice Spider 800"></div>
+            <div class="motor-info">
+              <h3>DEA TEO 700</h3>
+              <p>Operador electromecánico de 24 V para automatizar puertas de garaje seccionales y basculantes de muelles residenciales de hasta 9 m². Incorpora luz de cortesía, sensor antiaplastamiento y regulación automática de velocidad.</p>
+              <div class="motor-footer">
+                <button class="btn-comprar" onclick="irAContacto('DEA TEO 700')">Solicitar Presupuesto</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="motor-card" data-marca="nice">
+            <div class="badge-marca marca-nice">
+              <img src="img/NiceLogo.png" alt="Logo Nice" class="logo-marca-img">
+            </div>
+            <div class="motor-img-placeholder">
+              <img src="img/Spider_800.png" alt="Motor Nice Spider 800"></div>
+            <div class="motor-info">
+              <h3>Nice Spider 800</h3>
+              <p>Motorreductor inteligente diseñado para puertas de garaje seccionales y basculantes. Destaca por su conectividad Wi-Fi integrada para control por app.</p>
+              <div class="motor-footer">
+                <button class="btn-comprar" onclick="irAContacto('Nice Spider 800')">Solicitar Presupuesto</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="motor-card" data-marca="dea">
+            <div class="badge-marca marca-dea">
+              <img src="img/DeaLogo.png" alt="Logo DEA" class="logo-marca-img">
+            </div>
+            <div class="motor-img-placeholder">
+              <img src="img/Dea_Space.png" alt="Motor DEA Space">
+            </div>
+            <div class="motor-info">
+              <h3>DEA Space</h3>
+              <p>Para uso residencial y semi-intensivo, destaca por su velocidad de arrastre de 24 cm/s Tecnoparking y su silenciosa guía de correa reforzada con filamentos de hierro.</p>
+              <div class="motor-footer">
+                <button class="btn-comprar" onclick="irAContacto('DEA Space')">Solicitar Presupuesto</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="motor-card" data-marca="nice">
+            <div class="badge-marca marca-nice">
+              <img src="img/NiceLogo.png" alt="Logo Nice" class="logo-marca-img">
+            </div>
+            <div class="motor-img-placeholder">
+              <img src="img/nice-wingokit3524.png" alt="Motor Nice Wingokit 3524">
+            </div>
+            <div class="motor-info">
+              <h3>Nice Wingokit 3524</h3>
+              <p>Es un kit electromecánico de 24 Vdc diseñado para automatizar puertas batientes residenciales con hojas de hasta 3,5 metros. Ofrece autoaprendizaje de recorridos, sistema de detección de obstáculos y parada suave al cerrar.</p>
+              <div class="motor-footer">
+                <button class="btn-comprar" onclick="irAContacto('Nice Wingokit 3524')">Solicitar Presupuesto</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cobertura" class="coverage">
+      <div class="container">
+        <h2 class="section-title">Zonas de Cobertura</h2>
+
+        <div class="coverage-layout">
+          <div class="coverage-box info-box">
+            <h3>Área de Actuación</h3>
+            <p>
+              Prestamos servicio técnico especializado en *Granada capital, área metropolitana* (Armilla, Maracena, Albolote, Las Gabias, Churriana de la Vega) y resto de municipios de la provincia. Nos desplazamos a comunidades de propietarios, residenciales, comercios y polígonos industriales para garantizar la máxima rapidez en cada asistencia.
+            </p>
+          </div>
+
+          <div class="coverage-box status-box">
+            <h3>Disponibilidad Comercial</h3>
+            <p class="horario-destacado">🕒 Lunes a Viernes de 8:00 a 15:00</p>
+            <div class="service-badge">
+              <span class="live-dot"></span>
+              <p>
+                Atención al cliente y soporte técnico operativo durante toda la jornada laboral para la gestión de incidencias, presupuestos y revisiones normativas.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="soporte" class="faqs-section">
+      <div class="container">
+        <h2 class="section-title">Soporte Técnico y Normativa</h2>
+
+        <div class="bloques-wrapper">
+          <!-- BLOQUE 1 -->
+          <div class="bloques">
+            <h3>🚨Reparaciones y Urgencias</h3>
+            <div class="faqs-container">
+              <details class="faq-item">
+                <summary class="faq-question">
+                  ¿Qué hago si mi puerta automática no abre y tengo el coche
+                  atrapado?
+                </summary>
+                <div class="faq-answer">
+                  <p>
+                    Manten la calma. Todas las puertas automáticas disponen de un sistema de <strong>desbloqueo manual</strong> mediante llave, maneta o cordón para poder abrirlas a mano en caso de fallo eléctrico o avería. Si no consigues desbloquearla, llámanos de inmediato para que un técnico se desplace a ayudarte.
+                  </p>
+                </div>
+              </details>
+
+              <details class="faq-item">
+                <summary class="faq-question">
+                  ¿Cuánto tardáis en atender una avería urgente?
+                </summary>
+                <div class="faq-answer">
+                  <p>
+                    Disponemos de un servicio de asistencia rápida para emergencias. Normalmente, nuestro equipo técnico se desplaza a tu ubicación en un plazo de <strong>menos de 2 a 4 horas</strong> (según disponibilidad y zona) para solucionar la avería lo antes posible y garantizar tu seguridad.
+                  </p>
+                </div>
+              </details>
+
+              <details class="faq-item">
+                <summary class="faq-question">
+                  ¿Qué tipo de puertas y motores instaláis o reparáis?
+                </summary>
+                <div class="faq-answer">
+                  <p>
+                    Trabajamos con todo tipo de puertas mecánicas y automatismos, ya sean <strong>residenciales, comunitarias, comerciales o industriales.</strong> Esto incluye puertas seccionales, basculantes, correderas, batientes, persianas enrollables y barreras de acceso de cualquier marca del mercado.
+                  </p>
+                </div>
+              </details>
+            </div>
+          </div>
+          <!-- Fin Bloque 1 -->
+
+          <!-- BLOQUE 2 -->
+          <div class="bloques">
+            <h3>📜Normativa y Seguridad Legal</h3>
+            <div class="faqs-container">
+              <details class="faq-item">
+                <summary class="faq-question">
+                  ¿Es obligatorio por ley el mantenimiento y qué norma lo exige?
+                </summary>
+                <div class="faq-answer">
+                  <p>
+                    <strong>Sí, es totalmente obligatorio.</strong> La obligatoriedad viene recogida en el <strong>Código Técnico de la Edificación (CTE)</strong>, en su documento DB-SUA 2, y está regulada por el Ministerio de Industria. Esta normativa dictamina que las puertas automáticas son consideradas máquinas y deben mantenerse conforme a las normas europeas UNE-EN 12635 y UNE-EN 13241-1. El propietario de la instalación es el responsable civil y penal en caso de accidente si la puerta carece de mantenimiento reglado.
+                  </p>
+                </div>
+              </details>
+
+              <!-- Pregunta 2 -->
+              <details class="faq-item">
+                <summary class="faq-question">
+                  ¿Cada cuánto tiempo se deben realizar las revisiones técnicas?
+                </summary>
+                <div class="faq-answer">
+                  <p>
+                    Los plazos mínimos los estipula la norma UNE 85121 según el uso: para puertas de industrias o comercios y comunidades con más de 50 vehículos, el mantenimiento obligatorio debe ser <strong>trimestral</strong>; en comunidades de menos de 50 vehículos, <strong>semestral</strong>; y en puertas residenciales de viviendas unifamiliares, al menos <strong>anual</strong>.
+                  </p>
+                </div>
+              </details>
+
+              <!-- Pregunta 3 -->
+              <details class="faq-item">
+                <summary class="faq-question">
+                  ¿Qué es el marcado CE y qué ley lo regula?
+                </summary>
+                <div class="faq-answer">
+                  <p>
+                    El marcado CE es un requisito legal obligatorio derivado de la <strong>Directiva Europea de Productos de Construcción y la Directiva de Máquinas (Directiva 2006/42/CE)</strong>. Certifica que la puerta cumple unos estándares mínimos que evitan aplastamientos o atrapamientos. Motorizar una puerta manual o cambiar un cuadro de maniobras modifica la máquina; por ley, requiere una actualización del marcado CE y la emisión de una nueva Declaración de Conformidad.
+                  </p>
+                </div>
+              </details>
+            </div>
+          </div>
+          <!-- Fin Bloque 2 -->
+
+          <!-- BLOQUE 3 -->
+          <div class="bloques">
+            <h3>💼Presupuestos y Contratación</h3>
+            <div class="faqs-container">
+              <!-- Pregunta 1 -->
+              <details class="faq-item">
+                <summary class="faq-question">
+                  ¿El presupuesto para la instalación o sustitución de una puerta es gratuito?
+                </summary>
+                <div class="faq-answer">
+                  <p>
+                    <strong>Sí, elaboramos presupuestos completamente gratuitos y sin compromiso</strong> para nuevas instalaciones o sustituciones de puertas y motores. Un técnico puede visitar tu casa o negocio para evaluar el espacio, tomar medidas y asesorarte sobre la mejor opción para tus necesidades.
+                  </p>
+                </div>
+              </details>
+              <!-- Pregunta 2 -->
+              <details class="faq-item">
+                <summary class="faq-question">
+                  ¿Qué ventajas reales tiene firmar un Contrato de Servicios con Omologra?
+                </summary>
+                <div class="faq-answer">
+                  <p>
+                    Un contrato de mantenimiento preventivo te garantiza tranquilidad total. Incluye revisiones mecánicas y electrónicas programadas, prioridad de asistencia en caso de avería urgente, tarifas reducidas en mano de obra y repuestos, y la cumplimentación del libro de mantenimiento exigido por la ley.
+                  </p>
+                </div>
+              </details>
+              <!-- Pregunta 3 -->
+              <details class="faq-item">
+                <summary class="faq-question">
+                  ¿Qué garantías ofrecen y qué métodos de pago aceptáis?
+                </summary>
+                <div class="faq-answer">
+                  <p>
+                    Todas nuestras reparaciones e instalaciones cuentan con <strong>garantía</strong> conforme a la legislación vigente,
+                    tanto en la mano de obra como en los repuestos originales utilizados. Aceptamos pagos mediante <strong>transferencia bancaria y tarjeta de crédito/débito </strong>una vez finalizado y verificado el servicio.
+                  </p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+        <!-- Fin bloques-wrapper -->
+      </div>
+    </section>
+
+    <section id="contacto" class="contacto-section">
+      <div class="container">
+        <h2 id="contacto-titulo" class="section-title">Solicitar Asistencia Técnica</h2>
+        <p id="contacto-texto" class="section-subtitle">
+          Déjanos tus datos y nos pondremos en contacto contigo a la mayor brevedad para solucionar cualquier incidencia.
+        </p>
+
+        <form action="https://formsubmit.co/comercial@omologra.com" method="POST" class="contact-form">
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_subject" value="¡Nuevo mensaje de Asistencia Técnica!"/>
+
+          <!-- Página de agradecimiento -->
+          <input type="hidden" name="_next" value="https://omologra.com/gracias.html"/>
+
+          <!-- 🛡️ Campo Honeypot anti-robots -->
+          <input type="text" name="_honey" style="display: none" />
+
+          <div class="form-group">
+            <label for="nombre">Nombre o Empresa:</label>
+            <input type="text" id="nombre" name="name" required placeholder="Ej. Juan Pérez" autocomplete="name"/>
+          </div>
+
+          <div class="form-group">
+            <label for="telefono">Teléfono de contacto:</label>
+            <input type="tel" id="telefono" name="phone" required placeholder="Ej. 600 000 000" autocomplete="tel"/>
+          </div>
+
+          <div class="form-group">
+            <label for="mensaje">Descripción de la avería o servicio:</label>
+            <textarea id="mensaje" name="message" rows="5" required placeholder="Describe brevemente qué necesitas..."></textarea>
+          </div>
+
+          <!-- Casilla de Verificación Obligatoria -->
+          <div class="form-legal-checkbox">
+            <input type="checkbox" id="acepto-privacidad" name="privacy_accepted" required />
+            <label for="acepto-privacidad">Acepto la
+              <a href="politica-privacidad.html" target="_blank">Política de Privacidad</a>. *</label>
+          </div>
+
+          <!-- Información básica RGPD -->
+          <div class="form-legal-info">
+            <p>
+              <strong>Información básica sobre protección de datos:</strong>
+            </p>
+            <ul>
+              <li><strong>Responsable:</strong> Omologra, S.L.</li>
+              <li>
+                <strong>Finalidad:</strong> Atender tu solicitud de contacto y enviarte el presupuesto para servicios de puertas y automatismos.
+              </li>
+              <li>
+                <strong>Legitimación:</strong> Tu consentimiento expreso al marcar la casilla.
+              </li>
+              <li>
+                <strong>Destinatarios:</strong> No se cederán datos a terceros salvo obligación legal.
+              </li>
+              <li>
+                <strong>Derechos:</strong> Puedes acceder, rectificar, limitar y suprimir tus datos enviando un email a info@omologra.com
+              </li>
+            </ul>
+          </div>
+
+          <button type="submit" class="btn-submit">Enviar Solicitud</button>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2026 Omologra - Todos los derechos reservados.</p>
+        <div class="footer-links">
+          <a href="aviso-legal.html">Aviso Legal</a>
+          <span class="separator">|</span>
+          <a href="politica-privacidad.html">Política de Privacidad</a>
+          <span class="separator">|</span>
+          <a href="politica-cookies.html">Política de Cookies</a>
+          <span class="separator">|</span>
+          <a href="normativa.html">Normativa Mantenimiento Puertas</a>
+        </div>
+      </div>
+    </footer>
+    <a href="#inicio" class="scroll-to-top" aria-label="Volver al inicio">▲</a>
+
+    <!-- Banner de Consentimiento de Cookies -->
+    <div id="cookie-banner" class="cookie-container" style="display: none">
+      <div class="cookie-content">
+        <p>
+          Utilizamos cookies propias y de terceros para asegurar el correcto funcionamiento de la web, analizar tu navegación y mejorar tu experiencia. Puedes aceptar todas las cookies pulsando el botón "Aceptar" o rechazar su uso configurando tus preferencias. Para más información, consulta nuestra
+          <a href="politica-cookies.html">Política de Cookies</a>.
+        </p>
+        <div class="cookie-buttons">
+          <button id="btn-reject-cookies" class="cookie-btn btn-reject">
+            Rechazar
+          </button>
+          <button id="btn-accept-cookies" class="cookie-btn btn-accept">
+            Aceptar
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
