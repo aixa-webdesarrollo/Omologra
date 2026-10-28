@@ -445,37 +445,55 @@
     </section>
 
     <footer class="footer">
-      <div class="container">
-        <div class="footer-contact">
+  <div class="container footer-grid">
+    
+    <!-- COLUMNA 1: Datos de contacto -->
+    <div class="footer-col contact-info">
+      <h3>Contacto</h3>
       <a href="tel:+34651934114" class="contact-item">
-        <i class="fas fa-phone-alt"></i>
+        <i class="fa-solid fa-phone"></i>
         <span>+34 651 93 41 14</span>
       </a>
-      
       <a href="mailto:info@omologra.com" class="contact-item">
-        <i class="fas fa-envelope"></i>
+        <i class="fa-solid fa-envelope"></i>
         <span>info@omologra.com</span>
       </a>
-      
-      <!-- Enlace directo a Google Maps -->
-      <a href="https://google.com" target="_blank" rel="noopener noreferrer" class="contact-item location-link">
+      <div class="contact-item spec-location">
         <i class="fa-solid fa-location-dot"></i>
-        <span>Carretera Granada, 10. 18100 Armilla. Granada</span>
-      </a>
+        <span>Carretera Granada, 10.<br>18100 Armilla, Granada</span>
+      </div>
     </div>
 
-        <p>&copy; 2026 Omologra - Todos los derechos reservados.</p>
-        <div class="footer-links">
-          <a href="aviso-legal.html">Aviso Legal</a>
-          <span class="separator">|</span>
-          <a href="politica-privacidad.html">Política de Privacidad</a>
-          <span class="separator">|</span>
-          <a href="politica-cookies.html">Política de Cookies</a>
-          <span class="separator">|</span>
-          <a href="normativa.html">Normativa Mantenimiento Puertas</a>
-        </div>
-      </div>
-    </footer>
+    <!-- COLUMNA 2: Mapa real interactivo -->
+    <div class="footer-col footer-map">
+      <iframe 
+        src="https://google.com" 
+        width="100%" 
+        height="150" 
+        style="border:0; border-radius: 6px;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+  </div>
+
+  <!-- BARRA INFERIOR: Copyright y Enlaces de Ley -->
+  <div class="container footer-bottom">
+    <p>&copy; 2026 Omologra - Todos los derechos reservados.</p>
+    <div class="footer-links">
+      <a href="aviso-legal.html">Aviso Legal</a>
+      <span class="separator">|</span>
+      <a href="politica-privacidad.html">Política de Privacidad</a>
+      <span class="separator">|</span>
+      <a href="politica-cookies.html">Política de Cookies</a>
+      <span class="separator">|</span>
+      <a href="normativa.html">Normativa Mantenimiento Puertas</a>
+    </div>
+  </div>
+</footer>
+
     <a href="#inicio" class="scroll-to-top" aria-label="Volver al inicio">▲</a>
 
     <!-- Banner de Consentimiento de Cookies -->

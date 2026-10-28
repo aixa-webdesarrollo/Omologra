@@ -753,43 +753,84 @@ h2.section-title {
 
 .footer {
     background-color: var(--dark-color); /* Tu verde noche oscuro */
-    color: #a0aec0;                      /* Gris claro suave para el copyright */
-    text-align: center;
-    padding: 35px 0 25px 0;
+    color: #a0aec0;
+    padding: 50px 0 25px 0;
     font-size: 0.8rem;
-    border-top: 3px solid var(--primary-color); /* Fina línea superior en tu verde principal */
+    border-top: 3px solid var(--primary-color);
 }
 
-.footer-contact {
-    display: flex;
-    justify-content: center;
+/* Rejilla para alinear el contacto y el mapa a los lados */
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas simétricas de igual tamaño */
+    gap: 40px;
     align-items: center;
-    gap: 30px;
-    margin-bottom: 25px;
-    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
+    margin-bottom: 40px;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+}
+
+.footer-col h3 {
+    color: #ffffff;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Alineación en bloque del contacto */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start; /* Los elementos se alinean estrictamente a la izquierda */
+    text-align: left;
 }
 
 .contact-item {
     display: flex;
-    align-items: center;
-    gap: 8px;
+    align-items: center; /* Centrado vertical interno de icono y texto */
+    gap: 12px;
     color: #a0aec0;
     text-decoration: none;
     transition: color 0.2s ease;
-    padding: 4px 8px;
 }
 
 .contact-item i {
-    color: var(--secondary-color); /* Iconos en tu verde corporativo */
-    font-size: 0.9rem;
+    color: var(--primary-color);
+    font-size: 1rem;
+    width: 20px; /* Caja fija para que los textos arranquen en la misma línea vertical */
+    text-align: center;
 }
 
 .contact-item:hover {
     color: white !important;
 }
 
+/* Ajuste específico para la caja de la ubicación */
+.spec-location {
+    align-items: flex-start;
+}
+.spec-location i {
+    margin-top: 3px;
+}
+
+/* Contenedor del mapa */
+.footer-map {
+    width: 100%;
+}
+
+/* --- BARRA INFERIOR DE LEYES --- */
+.footer-bottom {
+    border-top: 1px solid #4a5568;
+    padding-top: 25px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
 .footer-links {
-    margin-top: 8px;
+    margin-top: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -798,11 +839,10 @@ h2.section-title {
 }
 
 .footer a {
-    color: #a0aec0; /* Blanco grisáceo discreto y muy legible sobre fondo oscuro */
+    color: #a0aec0;
     text-decoration: none;
     font-weight: 400;
     padding: 2px 6px;
-    background-color: transparent;
     transition: color 0.2s ease, background-color 0.2s ease;
 }
 
@@ -813,31 +853,37 @@ h2.section-title {
 }
 
 .footer .separator {
-    color: #4a5568; /* Gris oscuro para que las barras queden en segundo plano */
+    color: #4a5568;
     font-size: 0.75rem;
     user-select: none;
 }
 
-/* RESPONSIVO: Ajuste automático para pantallas de móviles compactos */
+/* ==========================================
+   RESPONSIVO INTEGRADO (TABLETS Y MÓVILES)
+   ========================================== */
 @media (max-width: 768px) {
-    /* Los tres elementos de contacto se ordenan en vertical */
-    .footer-contact {
-        flex-direction: column;
-        align-items: center;
-        gap: 14px;
-        margin-bottom: 20px;
+    .footer-grid {
+        grid-template-columns: 1fr; /* Pasa a una columna vertical en móviles */
+        gap: 30px;
+    }
+    
+    .footer-col h3 {
+        text-align: center;
+    }
+    
+    .contact-info {
+        align-items: center; /* Centra el bloque de contacto en pantallas pequeñas */
+        text-align: center;
     }
 }
 
-/* Ajuste automático para pantallas de móviles compactos (Tu regla original optimizada) */
 @media (max-width: 480px) {
     .footer-links {
-        flex-direction: column; /* Coloca los enlaces en vertical */
-        gap: 12px;              /* Un poquito más de separación táctil para evitar clics erróneos */
+        flex-direction: column;
+        gap: 12px;
     }
-    
     .footer .separator {
-        display: none; /* Oculta las barras verticales cuando están uno debajo de otro */
+        display: none;
     }
 }
 
