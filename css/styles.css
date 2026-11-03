@@ -821,12 +821,19 @@ h2.section-title {
     width: 100%;
 }
 
+.footer-map iframe {
+    display: block;
+    height: 100%;
+    min-height: 200px;
+}
+
 /* --- BARRA INFERIOR DE LEYES --- */
 .footer-bottom {
     border-top: 1px solid #4a5568;
     padding-top: 25px;
     max-width: 1100px;
     margin: 0 auto;
+    text-align: center;
 }
 
 .footer-links {
