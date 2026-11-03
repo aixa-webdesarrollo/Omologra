@@ -871,16 +871,31 @@ h2.section-title {
 @media (max-width: 768px) {
     .footer-grid {
         grid-template-columns: 1fr; /* Pasa a una columna vertical en móviles */
-        gap: 30px;
+        gap: 35px;
+        padding: 0 25px;
     }
     
     .footer-col h3 {
         text-align: center;
+        margin-bottom: 25px;
     }
     
     .contact-info {
-        align-items: center; /* Centra el bloque de contacto en pantallas pequeñas */
+        align-items: flex-start; /* Mantiene la alineación a la izquierda para lectura */
+        max-width: 280px;
+        margin: 0 auto;
         text-align: center;
+    }
+
+    .footer-map {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer-map iframe {
+        width: 100% !important;
+        margin: 0 auto;
     }
 }
 
@@ -1053,16 +1068,16 @@ h2.section-title {
 
 .cookie-container {
     position: fixed;
-    bottom: 20px;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, 50%);
     width: 90%;
     max-width: 850px;
-    background-color: var(--light-color); /* Tu blanco hueso */
-    box-shadow: 0 4px 20px rgba(9, 85, 64, 0.15); /* Sombra suave con tu tono verde */
+    background-color: var(--dark-color); /* Tu blanco hueso */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); /* Sombra suave con tu tono verde */
     border-radius: 8px;
-    border: 1px solid rgba(9, 85, 64, 0.1);
-    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Borde muy sutil para que se vea elegante */
+    padding: 25px;
     z-index: 9999;
 }
 
@@ -1074,13 +1089,13 @@ h2.section-title {
 
 .cookie-content p {
     font-size: 14px;
-    color: var(--text-color); /* Tu gris verdoso para lectura */
+    color: #e2e8f0; /* Tu gris verdoso para lectura */
     line-height: 1.5;
     margin: 0;
 }
 
 .cookie-content p a {
-    color: var(--primary-color); /* Enlace a la política en tu verde corporativo */
+    color: var(--secondary-color); /* Enlace a la política en tu verde corporativo */
     text-decoration: underline;
     font-weight: 600;
 }
@@ -1106,12 +1121,14 @@ h2.section-title {
 /* Botón Rechazar (Cumple la norma AEPD de igual importancia visual) */
 .cookie-btn.btn-reject {
     background-color: transparent;
-    border-color: var(--primary-color);
-    color: var(--primary-color);
+    border-color: #a0aec0;
+    color: #e2e8f0;
 }
 
 .cookie-btn.btn-reject:hover {
-    background-color: rgba(9, 85, 64, 0.05);
+    background-color: rgba(255, 255, 255, 0.08);
+    border-color: #ffffff;
+    color: #ffffff;
 }
 
 /* Botón Aceptar con tu verde manzana vibrante */
@@ -1127,13 +1144,16 @@ h2.section-title {
 /* Adaptación responsive para móviles */
 @media (max-width: 600px) {
     .cookie-container {
-        bottom: 10px;
-        width: 95%;
-        padding: 15px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 92%;
+        padding: 20px;
     }
     .cookie-buttons {
         flex-direction: column; /* Apila botones en vertical en móviles */
         width: 100%;
+        gap: 10px;
     }
     .cookie-btn {
         width: 100%;
