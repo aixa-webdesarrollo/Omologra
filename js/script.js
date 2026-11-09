@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+    
         const banner = document.getElementById("cookie-banner");
         const btnAccept = document.getElementById("btn-accept-cookies");
         const btnReject = document.getElementById("btn-reject-cookies");

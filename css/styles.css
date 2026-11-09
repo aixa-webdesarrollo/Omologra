@@ -1446,6 +1446,48 @@ h2.section-title {
     padding: 0 20px;
 }
 
+/* --- Contenedor del Botón Mostrar Más --- */
+.ver-mas-motores-contenedor {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* --- Botón Mostrar Más Estilizado --- */
+.btn-ver-mas-estilo {
+  display: inline-block;
+  background-color: transparent;
+  color: var(--primary-color);
+  font-family: var(--font-titles);
+  border: 2px solid var(--primary-color);
+  padding: 12px 30px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(18, 34, 29, 0.02);
+}
+
+/* --- Efecto Hover (Al pasar el ratón) --- */
+.btn-ver-mas-estilo:hover {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  box-shadow: 0 6px 20px rgba(18, 34, 29, 0.12);
+  transform: translateY(-2px);
+}
+
+/* --- Efecto Active (Al hacer clic) --- */
+.btn-ver-mas-estilo:active {
+  transform: translateY(1px);
+}
+
+.motores-grid .motor-card:nth-child(n+7) {
+  display: none;
+}
 /* Adaptación para pantallas móviles */
 @media (max-width: 500px) {
   .fila-filtro-inferior {

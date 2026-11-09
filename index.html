@@ -43,7 +43,7 @@
           </p>
           <div class="hero-buttons">
             <a href="#contacto" class="btn-primary">Pedir Presupuesto</a>
-            <a href="tel:+34651934114" class="btn-secondary">📞 Llamar Ahora</a>
+            <a href="tel:+34635452096" class="btn-secondary">📞 Llamar Ahora</a>
           </div>
         </div>
 
@@ -85,136 +85,221 @@
 
     <!-- SECCIÓN DE MOTORES Y AUTOMATISMOS (CORREGIDA COMPLETA) -->
     <section id="motores" class="motores-section">
-      <div class="container">
-        <h2 class="section-title">Motores y Automatismos Oficiales</h2>
-        <p class="section-subtitle">Somos distribuidores e instaladores oficiales de <strong>Nice y DEA</strong> para garantizar sistemas robustos, silenciosos y duraderos. Además, disponemos de soporte técnico especializado y multimarca para cualquier automatismo del mercado.</p>
+  <div class="container">
+    <h2 class="section-title">Motores y Automatismos Oficiales</h2>
+    <p class="section-subtitle">Somos distribuidores e instaladores oficiales de <strong>Nice y DEA</strong> para garantizar sistemas robustos, silenciosos y duraderos. Además, disponemos de soporte técnico especializado y multimarca para cualquier automatismo del mercado.</p>
 
-        <!-- Filtros de Marca -->
-        <div class="motores-filtros-contenedor">
-          
-          <div class="fila-filtro-inferior">
-            <!-- Botón DEA -->
-            <button class="btn-filtro" onclick="filtrarMotores('dea')">
-              <div class="btn-logo-container logo-dea-bg">
-                <img src="img/DeaLogo.png" alt="Logo DEA" class="btn-logo-img">
-              </div>
-              <span class="btn-leyenda">Motores DEA</span>
-            </button>
-            
-            <!-- Botón Nice -->
-            <button class="btn-filtro" onclick="filtrarMotores('nice')">
-              <div class="btn-logo-container logo-nice-bg">
-                <img src="img/NiceLogo.png" alt="Logo Nice" class="btn-logo-img">
-              </div>
-              <span class="btn-leyenda">Motores Nice</span>
-            </button>
-          </div> 
-          
-          <div class="fila-filtro-superior">
-            <button class="btn-filtro active" onclick="filtrarMotores('todos')">
-              <span class="btn-leyenda">Todos los Motores</span>
-            </button>
-          </div>    
-        </div>
+    <!-- Filtros de Marca -->
+    <div class="motores-filtros-contenedor">
+      <div class="fila-filtro-inferior">
+        <!-- Botón DEA -->
+        <button class="btn-filtro" onclick="filtrarMotores('dea')">
+          <div class="btn-logo-container logo-dea-bg">
+            <img src="img/DeaLogo.png" alt="Logo DEA" class="btn-logo-img">
+          </div>
+          <span class="btn-leyenda">Motores DEA</span>
+        </button>
+        
+        <!-- Botón Nice -->
+        <button class="btn-filtro" onclick="filtrarMotores('nice')">
+          <div class="btn-logo-container logo-nice-bg">
+            <img src="img/NiceLogo.png" alt="Logo Nice" class="btn-logo-img">
+          </div>
+          <span class="btn-leyenda">Motores Nice</span>
+        </button>
+      </div> 
       
-    <!-- Cuadrícula de Productos (Formato Catálogo 3 por fila) -->
-        <div class="motores-grid">
+      <div class="fila-filtro-superior">
+        <button class="btn-filtro active" onclick="filtrarMotores('todos')">
+          <span class="btn-leyenda">Todos los Motores</span>
+        </button>
+      </div>    
+    </div>
   
-          <div class="motor-card" data-marca="dea">
-            <div class="badge-marca marca-dea">
-              <img src="img/DeaLogo.png" alt="Logo DEA" class="logo-marca-img">
-            </div>
-            <div class="motor-img-placeholder"> <img src="img/DeaLivi4.png" alt="Motor DeaLivi4"> 
-            </div>
-            <div class="motor-info">
-              <h3>DEA Livi 4 </h3>
-              <p>Automatismo para puertas correderas residenciales de hasta 400 kg. Diseño compacto, funcionamiento silencioso y máxima fiabilidad. Cuadro de maniobras integrado,  regulación de fuerza y sistema de seguridad avanzado.</p>
-              <div class="motor-footer">
-                <button class="btn-comprar" onclick="irAContacto('DEA Livi 4')">Solicitar Presupuesto</button>
-              </div>
-            </div>
-          </div>
+    <!-- Cuadrícula de Productos -->
+    <div class="motores-grid">
 
-          <div class="motor-card" data-marca="nice">
-            <div class="badge-marca marca-nice">
-              <img src="img/NiceLogo.png" alt="Logo Nice" class="logo-marca-img">
-            </div>
-            <div class="motor-img-placeholder">
-              <img src="img/NiceRoad-400.png" alt="Motor Nice Road 400"></div>
-            <div class="motor-info">
-              <h3>Nice Road 400</h3>
-              <p>Ideal para puertas correderas residenciales de hasta 400 kg. Sistema inteligente de detección de obstáculos, autoaprendizaje de recorridos y funcionamiento regulables en apertura y cierre.</p>
-              <div class="motor-footer">
-                <button class="btn-comprar" onclick="irAContacto('Nice Road 400')">Solicitar Presupuesto</button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Motor 4: Nice Corredera -->
-          <div class="motor-card" data-marca="dea">
-            <div class="badge-marca marca-dea">
-              <img src="img/DeaLogo.png" alt="Logo DEA" class="logo-marca-img">
-            </div>
-            <div class="motor-img-placeholder">
-              <img src="img/TEO-700.png" alt="Motor Nice Spider 800"></div>
-            <div class="motor-info">
-              <h3>DEA TEO 700</h3>
-              <p>Operador electromecánico de 24 V para automatizar puertas de garaje seccionales y basculantes de muelles residenciales de hasta 9 m². Incorpora luz de cortesía, sensor antiaplastamiento y regulación automática de velocidad.</p>
-              <div class="motor-footer">
-                <button class="btn-comprar" onclick="irAContacto('DEA TEO 700')">Solicitar Presupuesto</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="motor-card" data-marca="nice">
-            <div class="badge-marca marca-nice">
-              <img src="img/NiceLogo.png" alt="Logo Nice" class="logo-marca-img">
-            </div>
-            <div class="motor-img-placeholder">
-              <img src="img/Spider_800.png" alt="Motor Nice Spider 800"></div>
-            <div class="motor-info">
-              <h3>Nice Spider 800</h3>
-              <p>Motorreductor inteligente diseñado para puertas de garaje seccionales y basculantes. Destaca por su conectividad Wi-Fi integrada para control por app.</p>
-              <div class="motor-footer">
-                <button class="btn-comprar" onclick="irAContacto('Nice Spider 800')">Solicitar Presupuesto</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="motor-card" data-marca="dea">
-            <div class="badge-marca marca-dea">
-              <img src="img/DeaLogo.png" alt="Logo DEA" class="logo-marca-img">
-            </div>
-            <div class="motor-img-placeholder">
-              <img src="img/Dea_Space.png" alt="Motor DEA Space">
-            </div>
-            <div class="motor-info">
-              <h3>DEA Space</h3>
-              <p>Para uso residencial y semi-intensivo, destaca por su velocidad de arrastre de 24 cm/s Tecnoparking y su silenciosa guía de correa reforzada con filamentos de hierro.</p>
-              <div class="motor-footer">
-                <button class="btn-comprar" onclick="irAContacto('DEA Space')">Solicitar Presupuesto</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="motor-card" data-marca="nice">
-            <div class="badge-marca marca-nice">
-              <img src="img/NiceLogo.png" alt="Logo Nice" class="logo-marca-img">
-            </div>
-            <div class="motor-img-placeholder">
-              <img src="img/nice-wingokit3524.png" alt="Motor Nice Wingokit 3524">
-            </div>
-            <div class="motor-info">
-              <h3>Nice Wingokit 3524</h3>
-              <p>Es un kit electromecánico de 24 Vdc diseñado para automatizar puertas batientes residenciales con hojas de hasta 3,5 metros. Ofrece autoaprendizaje de recorridos, sistema de detección de obstáculos y parada suave al cerrar.</p>
-              <div class="motor-footer">
-                <button class="btn-comprar" onclick="irAContacto('Nice Wingokit 3524')">Solicitar Presupuesto</button>
-              </div>
-            </div>
+      <!-- 1. DEA Livi 4 -->
+      <div class="motor-card" data-marca="dea">
+        <div class="badge-marca marca-dea">
+          <img src="img/DeaLogo.png" alt="Logo DEA" class="logo-marca-img">
+        </div>
+        <div class="motor-img-placeholder"> 
+          <img src="img/DeaLivi4.png" alt="Motor DeaLivi4"> 
+        </div>
+        <div class="motor-info">
+          <h3>DEA Livi 4 </h3>
+          <p>Automatismo para puertas correderas residenciales de hasta 400 kg. Diseño compacto, funcionamiento silencioso y máxima fiabilidad.</p>
+          <div class="motor-footer">
+            <button class="btn-comprar" onclick="irAContacto('DEA Livi 4')">Solicitar Presupuesto</button>
           </div>
         </div>
       </div>
-    </section>
+
+      <!-- 2. Nice Road 400 -->
+      <div class="motor-card" data-marca="nice">
+        <div class="badge-marca marca-nice">
+          <img src="img/NiceLogo.png" alt="Logo Nice" class="logo-marca-img">
+        </div>
+        <div class="motor-img-placeholder">
+          <img src="img/NiceRoad-400.png" alt="Motor Nice Road 400">
+        </div>
+        <div class="motor-info">
+          <h3>Nice Road 400</h3>
+          <p>Ideal para puertas correderas residenciales de hasta 400 kg. Sistema inteligente de detección de obstáculos y autoaprendizaje.</p>
+          <div class="motor-footer">
+            <button class="btn-comprar" onclick="irAContacto('Nice Road 400')">Solicitar Presupuesto</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. DEA TEO 700 -->
+      <div class="motor-card" data-marca="dea">
+        <div class="badge-marca marca-dea">
+          <img src="img/DeaLogo.png" alt="Logo DEA" class="logo-marca-img">
+        </div>
+        <div class="motor-img-placeholder">
+          <img src="img/TEO-700.png" alt="Motor DEA TEO 700">
+        </div>
+        <div class="motor-info">
+          <h3>DEA TEO 700</h3>
+          <p>Operador electromecánico de 24 V para automatizar puertas de garaje seccionales y basculantes de muelles residenciales de hasta 9 m².</p>
+          <div class="motor-footer">
+            <button class="btn-comprar" onclick="irAContacto('DEA TEO 700')">Solicitar Presupuesto</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Nice Spider 800 -->
+      <div class="motor-card" data-marca="nice">
+        <div class="badge-marca marca-nice">
+          <img src="img/NiceLogo.png" alt="Logo Nice" class="logo-marca-img">
+        </div>
+        <div class="motor-img-placeholder">
+          <img src="img/Spider_800.png" alt="Motor Nice Spider 800">
+        </div>
+        <div class="motor-info">
+          <h3>Nice Spider 800</h3>
+          <p>Motorreductor inteligente diseñado para puertas de garaje seccionales y basculantes. Destaca por su conectividad Wi-Fi integrada.</p>
+          <div class="motor-footer">
+            <button class="btn-comprar" onclick="irAContacto('Nice Spider 800')">Solicitar Presupuesto</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. DEA Space -->
+      <div class="motor-card" data-marca="dea">
+        <div class="badge-marca marca-dea">
+          <img src="img/DeaLogo.png" alt="Logo DEA" class="logo-marca-img">
+        </div>
+        <div class="motor-img-placeholder">
+          <img src="img/Dea_Space.png" alt="Motor DEA Space">
+        </div>
+        <div class="motor-info">
+          <h3>DEA Space</h3>
+          <p>Para uso residencial y semi-intensivo, destaca por su velocidad de arrastre de 24 cm/s y su silenciosa guía de correa reforzada.</p>
+          <div class="motor-footer">
+            <button class="btn-comprar" onclick="irAContacto('DEA Space')">Solicitar Presupuesto</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6. Nice Wingokit 3524 -->
+      <div class="motor-card" data-marca="nice">
+        <div class="badge-marca marca-nice">
+          <img src="img/NiceLogo.png" alt="Logo Nice" class="logo-marca-img">
+        </div>
+        <div class="motor-img-placeholder">
+          <img src="img/nice-wingokit3524.png" alt="Motor Nice Wingokit 3524">
+        </div>
+        <div class="motor-info">
+          <h3>Nice Wingokit 3524</h3>
+          <p>Kit electromecánico de 24 Vdc diseñado para automatizar puertas batientes residenciales con hojas de hasta 3,5 metros.</p>
+          <div class="motor-footer">
+            <button class="btn-comprar" onclick="irAContacto('Nice Wingokit 3524')">Solicitar Presupuesto</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7. MOTOR DE PRUEBA OCULTO (Aparecerá dinámicamente) -->
+      <div class="motor-card oculto" data-marca="dea">
+        <div class="badge-marca marca-dea">
+          <img src="img/DeaLogo.png" alt="Logo DEA" class="logo-marca-img">
+        </div>
+        <div class="motor-img-placeholder"> 
+          <img src="img/DeaLivi4.png" alt="Motor de Prueba"> 
+        </div>
+        <div class="motor-info">
+          <h3>DEA Livi Test 900 (Prueba)</h3>
+          <p>Este es el motor de prueba oculto. Demuestra cómo el sistema expande la cuadrícula dinámicamente sin romper las filas de 3 columnas.</p>
+          <div class="motor-footer">
+            <button class="btn-comprar" onclick="irAContacto('DEA Livi Test 900')">Solicitar Presupuesto</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 8. MOTOR DE PRUEBA OCULTO (Aparecerá dinámicamente) -->
+      <div class="motor-card oculto" data-marca="dea">
+        <div class="badge-marca marca-dea">
+          <img src="img/DeaLogo.png" alt="Logo DEA" class="logo-marca-img">
+        </div>
+        <div class="motor-img-placeholder"> 
+          <img src="img/DeaLivi4.png" alt="Motor de Prueba"> 
+        </div>
+        <div class="motor-info">
+          <h3>DEA Livi Test 900 (Prueba)</h3>
+          <p>Este es el motor de prueba oculto. Demuestra cómo el sistema expande la cuadrícula dinámicamente sin romper las filas de 3 columnas.</p>
+          <div class="motor-footer">
+            <button class="btn-comprar" onclick="irAContacto('DEA Livi Test 900')">Solicitar Presupuesto</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 9. MOTOR DE PRUEBA OCULTO (Aparecerá dinámicamente) -->
+      <div class="motor-card" data-marca="nice">
+        <div class="badge-marca marca-nice">
+          <img src="img/NiceLogo.png" alt="Logo Nice" class="logo-marca-img">
+        </div>
+        <div class="motor-img-placeholder"> 
+          <img src="img/NiceWingokit3524.png" alt="Motor de Prueba"> 
+        </div>
+        <div class="motor-info">
+          <h3>Nice Wingokit 3524 (Prueba)</h3>
+          <p>Este es el motor de prueba oculto. Demuestra cómo el sistema expande la cuadrícula dinámicamente sin romper las filas de 3 columnas.</p>
+          <div class="motor-footer">
+            <button class="btn-comprar" onclick="irAContacto('Nice Wingokit 3524')">Solicitar Presupuesto</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 10. MOTOR DE PRUEBA OCULTO (Aparecerá dinámicamente) -->
+      <div class="motor-card" data-marca="nice">
+        <div class="badge-marca marca-nice">
+          <img src="img/NiceLogo.png" alt="Logo Nice" class="logo-marca-img">
+        </div>
+        <div class="motor-img-placeholder"> 
+          <img src="img/NiceWingokit3524.png" alt="Motor de Prueba"> 
+        </div>
+        <div class="motor-info">
+          <h3>Nice Wingokit 3524 (Prueba)</h3>
+          <p>Este es el motor de prueba oculto. Demuestra cómo el sistema expande la cuadrícula dinámicamente sin romper las filas de 3 columnas.</p>
+          <div class="motor-footer">
+            <button class="btn-comprar" onclick="irAContacto('Nice Wingokit 3524')">Solicitar Presupuesto</button>
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- Cierre de .motores-grid -->
+
+    <!-- Botón "Mostrar más" -->
+    <div class="ver-mas-motores-contenedor">
+      <button id="btn-ver-mas-motores" class="btn-ver-mas-estilo" onclick="mostrarMasTodos()">
+        Mostrar más motores
+      </button>
+    </div>
+
+  </div>
+</section>
 
     <section id="cobertura" class="coverage">
       <div class="container">
@@ -449,7 +534,7 @@
       <h3>Contacto</h3>
       <a href="tel:+34651934114" class="contact-item">
         <i class="fa-solid fa-phone"></i>
-        <span>+34 651 93 41 14</span>
+        <span>+34 635 45 20 96</span>
       </a>
       <a href="mailto:info@omologra.com" class="contact-item">
         <i class="fa-solid fa-envelope"></i>
@@ -503,6 +588,6 @@
       </div>
     </div>
 
-    <script src="js/script.js"></script>
+    <script src="js/script copy.js"></script>
   </body>
 </html>
