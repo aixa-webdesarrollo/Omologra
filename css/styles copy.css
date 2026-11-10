@@ -1600,3 +1600,104 @@ h2.section-title {
         white-space: nowrap !important;
     }
 }
+
+/* Contenedor general que agrupa los 4 tipos de motores */
+.motores-accordion {
+  width: 100%;
+  max-width: 1140px; /* Ancho idóneo para que las 4 columnas respiren bien */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Distancia de separación entre una barra y otra */
+}
+
+/* El bloque individual de cada categoría */
+.accordion-item {
+  width: 100%;
+  background-color: none;
+  border: none;
+  border-bottom: 1px solid rgba(18, 34, 29, 0.01);
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* La barra o botón principal que el usuario pulsa */
+.accordion-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 24px;
+  background-color: #ffffff;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+  background-color: rgba(18, 34, 29, 0.02); /* Sutil cambio grisáceo al pasar el ratón */
+}
+
+.accordion-title {
+  font-family: var(--font-titles);
+  font-size: 1.15rem;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+/* El símbolo "+" de la derecha */
+.accordion-icon {
+  font-family: var(--font-titles);
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  transition: transform 0.3s ease; /* Hace que el giro sea fluido */
+}
+
+/* --- ESTADOS ACTIVOS (Cuando el JavaScript abre el acordeón) --- */
+.accordion-item.active .accordion-header {
+  background-color: rgba(18, 34, 29, 0.03); /* Sutil fondo verdoso al estar abierto */
+  border-bottom: 1px solid rgba(18, 34, 29, 0.08); /* Línea de separación con el contenido */
+}
+
+.accordion-item.active .accordion-icon {
+  transform: rotate(45deg); /* El "+" gira 45 grados y se convierte visualmente en una "X" para cerrar */
+}
+
+/* El contenedor interno donde duerme tu rejilla de 4 columnas */
+.accordion-content {
+  max-height: 0; /* Por defecto nace cerrado con altura cero */
+  overflow: hidden; /* Esconde todo lo que sobresalga mientras esté cerrado */
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out; /* Animación de cortina fluida */
+  padding: 0 24px;
+}
+
+/* Cuando añadimos la clase active por JS, le damos espacio al contenido */
+.accordion-item.active .accordion-content {
+  padding: 24px;
+}
+
+/* --- ADAPTACIONES RESPONSIVE PARA TU NUEVA REJILLA --- */
+@media (max-width: 991px) {
+  /* En tablets la cuadrícula pasa automáticamente de 4 columnas a 2 */
+  .motores-grid-cuatro {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  /* En smartphones se comprime a 1 columna para que las imágenes se vean grandes */
+  .motores-grid-cuatro {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0;
+  }
+  .accordion-header {
+    padding: 15px;
+  }
+  .accordion-title {
+    font-size: 1rem;
+  }
+}

@@ -1,167 +1,255 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Servicios Técnicos y de Mantenimiento | Omologra</title>
-    <link rel="icon" href="img/favicon-sf.png" type="image/png" sizes="32x32" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Open+Sans:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/styles copy.css.css" />
-    <!-- Enlace oficial completo de Font Awesome 6 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Servicios Técnicos y de Mantenimiento | Omologra</title>
+  <link rel="icon" href="img/favicon-sf.png" type="image/png" sizes="32x32" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
 
-  <body>
-    <header class="header">
-      <div class="container navbar">
-        <div class="logo">
-          <a href="#inicio"
-            ><img src="img/logo-Omologra.png" alt="Logotipo" class="logo-img"
-          /></a>
-        </div>
-        <nav class="nav">
-          <a href="#inicio">Inicio</a>
-          <a href="#servicios">Servicios</a>
-          <a href="#motores">Motores</a>
-          <a href="#contacto" class="btn-nav">Solicitar Técnico</a>
-        </nav>
+<body>
+  <header class="header">
+    <div class="container navbar">
+      <div class="logo">
+        <a href="#inicio"><img src="img/logo-Omologra.png" alt="Logotipo" class="logo-img"/></a>
       </div>
-    </header>
+      <nav class="nav">
+        <a href="#inicio">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#motores">Motores</a>
+        <a href="#contacto" class="btn-nav">Solicitar Técnico</a>
+      </nav>
+    </div>
+  </header>
 
-    <section id="inicio" class="hero">
-      <div class="container hero-content">
-        <div class="hero-text">
-          <h1>Mantenimiento y Reparación de Puertas y Automatismos</h1>
+  <section id="inicio" class="hero">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <h1>Mantenimiento y Reparación de Puertas y Automatismos</h1>
+        <p>
+          Asistencia técnica profesional, rápida y garantizada para particulares, comunidades y empresas en Granada. Solucionamos cualquier avería e instalación con repuestos de máxima calidad.
+        </p>
+        <div class="hero-buttons">
+          <a href="#contacto" class="btn-primary">Pedir Presupuesto</a>
+          <a href="tel:+34635452096" class="btn-secondary">📞 Llamar Ahora</a>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <img src="img/Motor DEA700.png" alt="Mantenimiento de puertas automáticas en Granada"/>
+      </div>
+    </div>
+  </section>
+
+<!-- SECCIÓN DE SERVICIOS -->
+  <section id="servicios" class="services">
+    <div class="container">
+      <h2 class="section-title">Nuestros Servicios</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Mantenimiento Preventivo</h3>
           <p>
-            Asistencia técnica profesional, rápida y garantizada para particulares, comunidades y empresas en Granada. Solucionamos cualquier avería e instalación con repuestos de máxima calidad.
+            Revisiones periódicas, engrase y puesta a punto de componentes mecánicos y electrónicos. Aseguramos el cumplimiento de la normativa vigente de seguridad, gestionamos el libro de mantenimiento obligatorio y evitamos averías costosas.
           </p>
-          <div class="hero-buttons">
-            <a href="#contacto" class="btn-primary">Pedir Presupuesto</a>
-            <a href="tel:+34635452096" class="btn-secondary">📞 Llamar Ahora</a>
-          </div>
         </div>
-
-        <div class="hero-image">
-          <img
-            src="img/Motor DEA700.png"
-            alt="Mantenimiento de puertas automáticas en Granada"
-          />
+        <div class="service-card">
+          <h3>Reparaciones y Urgencias</h3>
+          <p>
+            Asistencia técnica especializada ante fallos o bloqueos en sus puertas automáticas. Diagnosticamos con rapidez y reparamos averías de forma prioritaria utilizando repuestos oficiales para devolver la operatividad a su acceso.
+          </p>
         </div>
-      </div>
-    </section>
-
-    <!-- SECCIÓN DE SERVICIOS -->
-    <section id="servicios" class="services">
-      <div class="container">
-        <h2 class="section-title">Nuestros Servicios</h2>
-        <div class="services-grid">
-          <div class="service-card">
-            <h3>Mantenimiento Preventivo</h3>
-            <p>
-              Revisiones periódicas, engrase y puesta a punto de componentes mecánicos y electrónicos. Aseguramos el cumplimiento de la normativa vigente de seguridad, gestionamos el libro de mantenimiento obligatorio y evitamos averías costosas.
-            </p>
-          </div>
-          <div class="service-card">
-            <h3>Reparaciones y Urgencias</h3>
-            <p>
-              Asistencia técnica especializada ante fallos o bloqueos en sus puertas automáticas. Diagnosticamos con rapidez y reparamos averías de forma prioritaria utilizando repuestos oficiales para devolver la operatividad a su acceso.
-            </p>
-          </div>
-          <div class="service-card">
-            <h3>Instalaciones y Motorización</h3>
-            <p>
-              Montaje y automatización de todo tipo de puertas residenciales, comerciales e industriales. Trabajamos con sistemas oficiales Nice y DEA para garantizar instalaciones robustas, silenciosas y con certificación de marcado CE.
-            </p>
-          </div>
+        <div class="service-card">
+          <h3>Instalaciones y Motorización</h3>
+          <p>
+            Montaje y automatización de todo tipo de puertas residenciales, comerciales e industriales. Trabajamos con sistemas oficiales Nice y DEA para garantizar instalaciones robustas, silenciosas y con certificación de marcado CE.
+          </p>
         </div>
       </div>
-    </section>
-
+    </div>
+  </section>
+  
 <section id="motores" class="motores-section">
   <div class="container">
     <h2 class="section-title">Motores y Automatismos Oficiales</h2>
-    <p class="section-subtitle">Somos distribuidores e instaladores oficiales de <strong>Nice y DEA</strong>. Seleccione una marca y un tipo de apertura para desplegar los motores disponibles.</p>
+    <p class="section-subtitle">Somos distribuidores e instaladores oficiales de <strong>Nice y DEA</strong> para garantizar sistemas robustos, silenciosos y duraderos. Además, disponemos de soporte técnico especializado y multimarca para cualquier automatismo del mercado.</p>
 
-    <!-- CONTROL DE FILTROS EN DOS NIVELES -->
+    <!-- Tus filtros originales (Se conservan exactamente igual) -->
     <div class="motores-filtros-contenedor">
-      <!-- Nivel 1: Selección de Marca -->
-      <div class="fila-filtro-marcas">
-        <button class="btn-filtro-marca active" onclick="filtrarMarca('todos')">Todos los Motores</button>
-        <button class="btn-filtro-marca" onclick="filtrarMarca('dea')">Motores DEA</button>
-        <button class="btn-filtro-marca" onclick="filtrarMarca('nice')">Motores Nice</button>
-      </div>
+      <div class="fila-filtro-inferior">
+        <!-- Botón DEA -->
+        <button class="btn-filtro" onclick="filtrarMotores('dea')">
+          <div class="btn-logo-container logo-dea-bg">
+            <img src="img/DeaLogo.png" alt="Logo DEA" class="btn-logo-img">
+          </div>
+          <span class="btn-leyenda">Motores DEA</span>
+        </button>
+        
+        <!-- Botón Nice -->
+        <button class="btn-filtro" onclick="filtrarMotores('nice')">
+          <div class="btn-logo-container logo-nice-bg">
+            <img src="img/NiceLogo.png" alt="Logo Nice" class="btn-logo-img">
+          </div>
+          <span class="btn-leyenda">Motores Nice</span>
+        </button>
+      </div> 
       
-      <!-- Nivel 2: Selección por Tipo de Apertura -->
-      <div class="fila-filtro-tipos">
-        <button class="btn-filtro-tipo" onclick="filtrarTipo('seccional')">Seccional</button>
-        <button class="btn-filtro-tipo" onclick="filtrarTipo('abatible')">Abatible</button>
-        <button class="btn-filtro-tipo" onclick="filtrarTipo('corredera')">Corredera</button>
-        <button class="btn-filtro-tipo" onclick="filtrarTipo('enrollable')">Enrollable</button>
-      </div>
+      <div class="fila-filtro-superior">
+        <button class="btn-filtro active" onclick="filtrarMotores('todos')">
+          <span class="btn-leyenda">Todos los Motores</span>
+        </button>
+      </div>    
     </div>
   
-    <!-- CUADRÍCULA ÚNICA DE MOTORES (Nacen ocultos por CSS) -->
-    <div class="motores-grid">
+    <!-- CONTENEDOR PRINCIPAL DEL ESCAPARATE HORIZONTAL -->
+<div class="escaparate-wrapper">
+  
+  <!-- LA FILA PRINCIPAL: Las 4 tarjetas estrella alineadas horizontalmente -->
+  <div class="motores-grid-cuatro">
 
-      <!-- Motor 1 -->
-      <div class="motor-card" data-marca="dea" data-tipo="seccional">
-        <div class="badge-marca"><img src="img/DeaLogo.png" alt="Logo DEA"></div>
-        <div class="motor-img-placeholder"><img src="img/TEO-700.png" alt="DEA TEO"></div>
-        <div class="motor-info"><h3>DEA TEO 700</h3><p>Para puertas seccionales de hasta 9 m².</p></div>
-      </div>
-
-      <!-- Motor 2 -->
-      <div class="motor-card" data-marca="nice" data-tipo="seccional">
-        <div class="badge-marca"><img src="img/NiceLogo.png" alt="Logo Nice"></div>
-        <div class="motor-img-placeholder"><img src="img/Spider_800.png" alt="Nice Spider"></div>
-        <div class="motor-info"><h3>Nice Spider 800</h3><p>Tracción inteligente para techos residenciales.</p></div>
-      </div>
-
-      <!-- Motor 3 -->
-      <div class="motor-card" data-marca="dea" data-tipo="corredera">
-        <div class="badge-marca"><img src="img/DeaLogo.png" alt="Logo DEA"></div>
-        <div class="motor-img-placeholder"><img src="img/DeaLivi4.png" alt="DEA Livi"></div>
-        <div class="motor-info"><h3>DEA Livi 4</h3><p>Automatismo compacto para cancelas de 400 kg.</p></div>
-      </div>
-
-      <!-- Motor 4 (Añade aquí el resto de tus motores con sus marcas y tipos correspondientes) -->
-
-    </div> <!-- Fin .motores-grid -->
-
+  <!-- Tarjeta 1: Seccional (Destacado) -->
+  <div class="motor-card" data-marca="nice" data-tipo="seccional">
+  <div class="badge-marca marca-nice">
+    <img src="img/NiceLogo.png" alt="Logo Nice" class="logo-marca-img">
+    <span class="badge-tipo-texto">Seccional</span>
   </div>
-</section>
-   
-    <section id="cobertura" class="coverage">
-      <div class="container">
-        <h2 class="section-title">Zonas de Cobertura</h2>
+  <div class="motor-img-placeholder"><img src="img/Spider_800.png" alt="Motor Nice Spider 800"></div>
+  <div class="motor-info">
+    <h3>Nice Spider 800</h3>
+    <p>Motorreductor inteligente diseñado para puertas seccionales y basculantes con Wi-Fi.</p>
+    <div class="motor-footer"><button class="btn-comprar" onclick="irAContacto('Nice Spider 800')">Solicitar Presupuesto</button></div>
+  </div>
+  <button class="btn-ver-gama-card" onclick="desplegarGama('seccional', this)">Ver gama seccionales</button>
+</div>
 
-        <div class="coverage-layout">
-          <div class="coverage-box info-box">
-            <h3>Área de Actuación</h3>
-            <p>
-              Prestamos servicio técnico especializado en *Granada capital, área metropolitana* (Armilla, Maracena, Albolote, Las Gabias, Churriana de la Vega) y resto de municipios de la provincia. Nos desplazamos a comunidades de propietarios, residenciales, comercios y polígonos industriales para garantizar la máxima rapidez en cada asistencia.
-            </p>
+    <!-- Tarjeta 2: Abatible (Destacado) -->
+    <div class="motor-card" data-marca="nice" data-tipo="abatible">
+      <div class="badge-marca marca-nice"><img src="img/NiceLogo.png" alt="Logo Nice" class="logo-marca-img">
+      <span class="badge-tipo-texto">Abatible</span></div>
+      <div class="motor-img-placeholder"><img src="img/nice-wingokit3524.png" alt="Motor Nice Wingokit 3524"></div>
+      <div class="motor-info">
+        <h3>Nice Wingokit 3524</h3>
+        <p>Kit electromecánico de 24 Vdc diseñado para automatizar puertas batientes residenciales.</p>
+        <div class="motor-footer"><button class="btn-comprar" onclick="irAContacto('Nice Wingokit 3524')">Solicitar Presupuesto</button></div>
+      </div>
+      <!-- Deshabilitado o invisible si no hay más modelos de esta categoría -->
+      <button class="btn-ver-gama-card" style="visibility: hidden;">Único modelo</button>
+    </div>
+
+    <!-- Tarjeta 3: Corredera (Destacado) -->
+    <div class="motor-card" data-marca="dea" data-tipo="corredera">
+      <div class="badge-marca marca-dea"><img src="img/DeaLogo.png" alt="Logo DEA" class="logo-marca-img">
+      <span class="badge-tipo-texto">Corredera</span></div>
+      <div class="motor-img-placeholder"><img src="img/DeaLivi4.png" alt="Motor DeaLivi4"></div>
+      <div class="motor-info">
+        <h3>DEA Livi 4</h3>
+        <p>Automatismo para puertas correderas residenciales de hasta 400 kg. Diseño compacto y silencioso.</p>
+        <div class="motor-footer"><button class="btn-comprar" onclick="irAContacto('DEA Livi 4')">Solicitar Presupuesto</button></div>
+      </div>
+      <button class="btn-ver-gama-card" onclick="desplegarGama('corredera', this)">Ver gama correderas</button>
+    </div>
+
+    <!-- Tarjeta 4: Enrollable (Destacado) -->
+    <div class="motor-card" data-marca="dea" data-tipo="enrollable">
+      <div class="badge-marca marca-dea"><img src="img/DeaLogo.png" alt="Logo DEA" class="logo-marca-img">
+      <span class="badge-tipo-texto">Enrollable</span></div>
+      <div class="motor-img-placeholder"><img src="img/Dea_Space.png" alt="Motor DEA Space"></div>
+      <div class="motor-info">
+        <h3>DEA Space</h3>
+        <p>Para uso residencial y semi-intensivo, destaca por su velocidad de arrastre de 24 cm/s.</p>
+        <div class="motor-footer"><button class="btn-comprar" onclick="irAContacto('DEA Space')">Solicitar Presupuesto</button></div>
+      </div>
+      <button class="btn-ver-gama-card" style="visibility: hidden;">Único modelo</button>
+    </div>
+  </div> <!-- Fin .motores-grid-cuatro -->
+
+  <!-- ZONAS DE EXPANSIÓN INFERIORES: Brotan abajo de la fila principal cuando se solicita -->
+  <div class="paneles-gama-desplegables">
+    
+    <!-- Sub-Gama Seccionales -->
+    <div id="gama-seccional" class="gama-desplegable-bloque">
+      <h3 class="categoria-label-superior">Modelos Adicionales para Puertas Seccionales</h3>
+      <div class="motores-grid-cuatro">
+        <div class="motor-card" data-marca="dea">
+          <div class="badge-marca marca-dea"><img src="img/DeaLogo.png" alt="Logo DEA" class="logo-marca-img"></div>
+          <div class="motor-img-placeholder"><img src="img/TEO-700.png" alt="Motor DEA TEO 700"></div>
+          <div class="motor-info">
+            <h3>DEA TEO 700</h3>
+            <p>Operador electromecánico de 24 V para automatizar puertas de garaje seccionales residenciales.</p>
+            <div class="motor-footer"><button class="btn-comprar" onclick="irAContacto('DEA TEO 700')">Solicitar Presupuesto</button></div>
           </div>
+        </div>
+      </div>
+    </div>
 
-          <div class="coverage-box status-box">
-            <h3>Disponibilidad Comercial</h3>
-            <p class="horario-destacado">🕒 Lunes a Viernes de 8:00 a 15:00</p>
+    <!-- Sub-Gama Correderas (Aquí están tus otros 3 motores) -->
+    <div id="gama-corredera" class="gama-desplegable-bloque">
+      <h3 class="categoria-label-superior">Modelos Adicionales para Puertas Correderas</h3>
+      <div class="motores-grid-cuatro">
+        <div class="motor-card" data-nice="nice" data-marca="nice">
+          <div class="badge-marca marca-nice"><img src="img/NiceLogo.png" alt="Logo Nice" class="logo-marca-img"></div>
+          <div class="motor-img-placeholder"><img src="img/NiceRoad-400.png" alt="Motor Nice Road 400"></div>
+          <div class="motor-info">
+            <h3>Nice Road 400</h3>
+            <p>Ideal para puertas correderas residenciales de hasta 400 kg con sistema inteligente de obstáculos.</p>
+            <div class="motor-footer"><button class="btn-comprar" onclick="irAContacto('Nice Road 400')">Solicitar Presupuesto</button></div>
+          </div>
+        </div>
+
+        <div class="motor-card" data-marca="nice">
+          <div class="badge-marca marca-nice"><img src="img/NiceLogo.png" alt="Logo Nice" class="logo-marca-img"></div>
+          <div class="motor-img-placeholder"><img src="img/NiceRoad-400.png" alt="Motor Nice Adicional"></div>
+          <div class="motor-info">
+            <h3>Nice Robus 400</h3>
+            <p>Automatismo veloz para cancelas correderas de hasta 400 kg con sistema BlueBUS y aceleración regulable.</p>
+            <div class="motor-footer"><button class="btn-comprar" onclick="irAContacto('Nice Robus 400')">Solicitar Presupuesto</button></div>
+          </div>
+        </div>
+
+        <div class="motor-card" data-marca="dea">
+          <div class="badge-marca marca-dea"><img src="img/DeaLogo.png" alt="Logo DEA" class="logo-marca-img"></div>
+          <div class="motor-img-placeholder"><img src="img/DeaLivi4.png" alt="Motor DEA Adicional"></div>
+          <div class="motor-info">
+            <h3>DEA Livi 800</h3>
+            <p>Operador robusto para cancelas correderas comunitarias de hasta 800 kg. Gestión inteligente de frenada.</p>
+            <div class="motor-footer"><button class="btn-comprar" onclick="irAContacto('DEA Livi 800')">Solicitar Presupuesto</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> <!-- Fin .paneles-gama-desplegables -->
+</div>
+</div>
+</section>
+
+  <section id="cobertura" class="coverage">
+    <div class="container">
+      <h2 class="section-title">Zonas de Cobertura</h2>
+      <div class="coverage-layout">
+        <div class="coverage-box info-box">
+          <h3>Área de Actuación</h3>
+          <p>
+            Prestamos servicio técnico especializado en *Granada capital, área metropolitana* (Armilla, Maracena, Albolote, Las Gabias, Churriana de la Vega) y resto de municipios de la provincia. Nos desplazamos a comunidades de propietarios, residenciales, comercios y polígonos industriales para garantizar la máxima rapidez en cada asistencia.
+          </p>
+        </div>
+        <div class="coverage-box status-box">
+          <h3>Disponibilidad Comercial</h3>
+          <p class="horario-destacado">🕒 Lunes a Viernes de 8:00 a 15:00</p>
             <div class="service-badge">
               <span class="live-dot"></span>
               <p>
                 Atención al cliente y soporte técnico operativo durante toda la jornada laboral para la gestión de incidencias, presupuestos y revisiones normativas.
               </p>
             </div>
-          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
     <section id="soporte" class="faqs-section">
       <div class="container">
@@ -386,7 +474,6 @@
     <div class="footer-col footer-map">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13946.741538192553!2d-3.6320325753333833!3d37.14664515625772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd71fb7809e7617d%3A0xd9f57430525c342d!2sCtra.%20Granada%2C%2010%2C%2018100%20Armilla%2C%20Granada!5e1!3m2!1ses!2ses!4v1793695484101!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
     </div>
-
   </div>
 
   <!-- BARRA INFERIOR: Copyright y Enlaces de Ley -->

@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (banner) {
         if (!localStorage.getItem("cookies-aceptadas")) {
-            banner.style.display = "block"; 
+            banner.style.display = "block"; // Muestra el banner si es una nueva visita
         }
 
         if (btnAccept) {
@@ -24,63 +24,110 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-let marcaSeleccionada = 'todos';
-let tipoSeleccionado = ''; // Nace vacío para que ningún motor se abra al principio
+    // === 2. INICIALIZACIÓN DEL CATÁLOGO ===
+    // Al cargar la página por primera vez, aplicamos el filtro general de 'todos'
+    filtrarMotores('todos');
+});
 
-function filtrarMarca(marca) {
-  marcaSeleccionada = marca;
+// === 3. LOGICA DEL ESCAPARATE INTELIGENTE (FILTROS Y DESPLIEGUES) ===
+let filtroMarcaActual = 'todos';
+
+function filtrarMotores(marca) {
+  filtroMarcaActual = marca;
   
-  // Iluminar botón de marca seleccionado
-  const botones = document.querySelectorAll('.btn-filtro-marca');
+  // 1. Actualizar las clases activas (.active) en tus botones superiores originales
+  const botones = document.querySelectorAll('.btn-filtro');
   botones.forEach(btn => btn.classList.remove('active'));
-  if (event && event.currentTarget) event.currentTarget.classList.add('active');
   
-  aplicarFiltrosCatalogo();
-}
+  if (typeof event !== 'undefined' && event) {
+    if (event.currentTarget) {
+      event.currentTarget.classList.add('active');
+    } else if (event.target) {
+      const botonCercano = event.target.closest('.btn-filtro');
+      if (botonCercano) botonCercano.classList.add('active');
+    }
+  } else {
+    const btnTodos = document.querySelector('.fila-filtro-superior .btn-filtro');
+    if (btnTodos) btnTodos.classList.add('active');
+  }
 
-function filtrarTipo(tipo) {
-  tipoSeleccionado = tipo;
-  
-  // Iluminar botón de tipo seleccionado
-  const botones = document.querySelectorAll('.btn-filtro-tipo');
-  botones.forEach(btn => btn.classList.remove('active'));
-  if (event && event.currentTarget) event.currentTarget.classList.add('active');
-  
-  aplicarFiltrosCatalogo();
-}
-
-function aplicarFiltrosCatalogo() {
+  // 2. Filtrar las tarjetas de motores aplicando el descarte de marca
   const tarjetas = document.querySelectorAll('.motor-card');
+  const panelesGama = document.querySelectorAll('.gama-desplegable-bloque');
+  const botonesVerGama = document.querySelectorAll('.btn-ver-gama-card');
 
   tarjetas.forEach(tarjeta => {
-    // Si el usuario aún no ha pulsado en ninguna categoría (tipo), todo va oculto
-    if (tipoSeleccionado === '') {
-      tarjeta.classList.add('oculto');
-      tarjeta.style.display = 'none';
-      return;
-    }
-
     const marcaTarjeta = tarjeta.getAttribute('data-marca');
-    const tipoTarjeta = tarjeta.getAttribute('data-tipo');
 
-    const cumpleMarca = (marcaSeleccionada === 'todos' || marcaTarjeta === marcaSeleccionada);
-    const cumpleTipo = (tipoTarjeta === tipoSeleccionado);
-
-    if (cumpleMarca && cumpleTipo) {
-      // Si cumple la combinación elegida, se despliega de golpe en formato flex
+    if (marca === 'todos' || marcaTarjeta === marca) {
       tarjeta.classList.remove('oculto');
-      tarjeta.style.display = 'flex';
     } else {
       tarjeta.classList.add('oculto');
-      tarjeta.style.display = 'none';
+    }
+  });
+
+  // 3. Controlar la apertura y cierre automático de las gamas según la marca elegida
+  panelesGama.forEach(panel => {
+    const tipoPanel = panel.id.replace('gama-', '');
+    
+    if (marca === 'todos') {
+      // Si volvemos a "Todos", replegamos los paneles inferiores automáticamente
+      panel.classList.remove('abierto');
+      panel.style.maxHeight = null;
+      
+      // Restablecemos el texto original del botón de la tarjeta
+      const btnAsociado = document.querySelector(`button[onclick*="'${tipoPanel}'"]`);
+      if (btnAsociado) btnAsociado.innerText = `Ver gama ${tipoPanel}es`;
+      
+      // Hacemos que los botones de "Ver gama" vuelvan a ser visibles de serie
+      botonesVerGama.forEach(b => {
+        if (b.getAttribute('onclick') && b.getAttribute('onclick').includes(tipoPanel)) {
+          b.style.visibility = 'visible';
+        }
+      });
+    } else {
+      // Si eligen una marca (Nice o DEA), forzamos la apertura total del panel para mostrar el arsenal completo
+      panel.classList.add('abierto');
+      panel.style.maxHeight = panel.scrollHeight + "px";
+      
+      // Ocultamos de forma temporal los botones porque ya se está exponiendo todo el catálogo
+      botonesVerGama.forEach(b => b.style.visibility = 'hidden');
     }
   });
 }
 
-// Forzar el estado oculto inicial nada más cargar la página
-document.addEventListener("DOMContentLoaded", function() {
-  aplicarFiltrosCatalogo();
-});
+// 4. FUNCIÓN INTERACTIVA DE CADA TARJETA (El clic del botón "Ver gama")
+function desplegarGama(tipo, boton) {
+  const panel = document.getElementById(`gama-${tipo}`);
+  
+  if (panel) {
+    // Si el panel ya está abierto, lo cerramos limpiando su altura de forma estricta
+    if (panel.classList.contains('abierto')) {
+      panel.classList.remove('abierto');
+      panel.style.maxHeight = null; // Libera la altura y el CSS lo repliega a 0 automáticamente
+      boton.innerText = `Ver gama ${tipo}es`;
+    } else {
+      // Cerramos cualquier otro panel que estuviera abierto previamente por limpieza
+      const panelesActivos = document.querySelectorAll('.gama-desplegable-bloque.abierto');
+      panelesActivos.forEach(p => {
+        p.classList.remove('abierto');
+        p.style.maxHeight = null;
+        
+        // Buscamos el botón de la tarjeta correspondiente para restablecer su texto
+        const tipoPanel = p.id.replace('gama-', '');
+        const btnAsociado = document.querySelector(`button[onclick*="'${tipoPanel}'"]`);
+        if (btnAsociado) {
+          btnAsociado.innerText = `Ver gama ${tipoPanel}es`;
+        }
+      });
+
+      // Abrimos el panel solicitado calculando su altura exacta dinámica en base a las tarjetas visibles
+      panel.classList.add('abierto');
+      panel.style.maxHeight = panel.scrollHeight + "px";
+      boton.innerText = `Ocultar gama ${tipo}es`;
+    }
+  }
+}
 
 // === 4. TEXTOS DINÁMICOS DEL FORMULARIO DE CONTACTO ===
 function irAContacto(nombreMotor) {
@@ -114,4 +161,3 @@ window.addEventListener('scroll', function() {
         }
     }
 });
-
