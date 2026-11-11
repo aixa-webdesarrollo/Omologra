@@ -77,9 +77,12 @@ function filtrarMotores(marca) {
       
       // Restablecemos el texto original del botón de la tarjeta
       const btnAsociado = document.querySelector(`button[onclick*="'${tipoPanel}'"]`);
-      if (btnAsociado) btnAsociado.innerText = `Ver gama ${tipoPanel}es`;
-      
-      // Hacemos que los botones de "Ver gama" vuelvan a ser visibles de serie
+      if (btnAsociado) {
+  const plural = tipoPanel.endsWith('l') ? `${tipoPanel}es` : `${tipoPanel}s`;
+  btnAsociado.innerText = `Ver gama ${plural}`;
+}
+
+    // Hacemos que los botones de "Ver gama" vuelvan a ser visibles de serie
       botonesVerGama.forEach(b => {
         if (b.getAttribute('onclick') && b.getAttribute('onclick').includes(tipoPanel)) {
           b.style.visibility = 'visible';
@@ -101,11 +104,14 @@ function desplegarGama(tipo, boton) {
   const panel = document.getElementById(`gama-${tipo}`);
   
   if (panel) {
+    // Calculamos el plural correcto de la categoría actual
+    const plural = tipo.endsWith('l') ? `${tipo}es` : `${tipo}s`;
+
     // Si el panel ya está abierto, lo cerramos limpiando su altura de forma estricta
     if (panel.classList.contains('abierto')) {
       panel.classList.remove('abierto');
       panel.style.maxHeight = null; // Libera la altura y el CSS lo repliega a 0 automáticamente
-      boton.innerText = `Ver gama ${tipo}es`;
+      boton.innerText = `Ver gama ${plural}`;
     } else {
       // Cerramos cualquier otro panel que estuviera abierto previamente por limpieza
       const panelesActivos = document.querySelectorAll('.gama-desplegable-bloque.abierto');
@@ -117,14 +123,15 @@ function desplegarGama(tipo, boton) {
         const tipoPanel = p.id.replace('gama-', '');
         const btnAsociado = document.querySelector(`button[onclick*="'${tipoPanel}'"]`);
         if (btnAsociado) {
-          btnAsociado.innerText = `Ver gama ${tipoPanel}es`;
+          const pluralPanel = tipoPanel.endsWith('l') ? `${tipoPanel}es` : `${tipoPanel}s`;
+          btnAsociado.innerText = `Ver gama ${pluralPanel}`;
         }
       });
 
       // Abrimos el panel solicitado calculando su altura exacta dinámica en base a las tarjetas visibles
       panel.classList.add('abierto');
       panel.style.maxHeight = panel.scrollHeight + "px";
-      boton.innerText = `Ocultar gama ${tipo}es`;
+      boton.innerText = `Ocultar gama ${plural}`;
     }
   }
 }

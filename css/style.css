@@ -1467,3 +1467,30 @@ font-size: 1.4rem;
   margin-bottom: 10px;
   letter-spacing: 0.5px;
 }
+
+.card-ficha {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+.ficha-tecnica {
+  margin: 12px 0 18px 0;
+  font-size: 0.85rem;
+  text-align: left;
+}
+
+.ficha-tecnica div {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  border-bottom: 1px solid #e2e8f0;
+  color: #475569;
+}
+
+.ficha-tecnica div:last-child {
+  border-bottom: none;
+}
+
+.ficha-tecnica strong {
+  color: #1e293b;
+}
