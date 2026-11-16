@@ -1,99 +1,96 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // === 1. CONTROL DEL BANNER DE COOKIES ===
-    const banner = document.getElementById("cookie-banner");
-    const btnAccept = document.getElementById("btn-accept-cookies");
-    const btnReject = document.getElementById("btn-reject-cookies");
+  // === 1. CONTROL DEL BANNER DE COOKIES ===
+  const banner = document.getElementById("cookie-banner");
+  const btnAccept = document.getElementById("btn-accept-cookies");
+  const btnReject = document.getElementById("btn-reject-cookies");
 
-    if (banner) {
-        if (!localStorage.getItem("cookies-aceptadas")) {
-            banner.style.display = "block"; // Muestra el banner si es una nueva visita
-        }
-
-        if (btnAccept) {
-            btnAccept.addEventListener("click", function () {
-                localStorage.setItem("cookies-aceptadas", "true");
-                banner.style.display = "none";
-            });
-        }
-
-        if (btnReject) {
-            btnReject.addEventListener("click", function () {
-                localStorage.setItem("cookies-aceptadas", "false");
-                banner.style.display = "none";
-            });
-        }
+  if (banner) {
+    if (!localStorage.getItem("cookies-aceptadas")) {
+      banner.style.display = "block"; // Muestra el banner si es una nueva visita
     }
-
-    // === 2. INICIALIZACIÓN DEL CATÁLOGO ===
-    // Al cargar la página por primera vez, aplicamos el filtro general de 'todos'
-    filtrarMotores('todos');
+      if (btnAccept) {
+        btnAccept.addEventListener("click", function () {
+          localStorage.setItem("cookies-aceptadas", "true");
+          banner.style.display = "none";
+        });
+    }
+      if (btnReject) {
+        btnReject.addEventListener("click", function () {
+          localStorage.setItem("cookies-aceptadas", "false");
+          banner.style.display = "none";
+        });
+    }
+  }
+  
+  // Decalaramos la variable
+  let filtroMarcaActual = 'todos';
+  
+  // Llamamos a la función inicial
+  filtrarMotores('todos');
 });
 
-// === 3. LOGICA DEL ESCAPARATE INTELIGENTE (FILTROS Y DESPLIEGUES) ===
-let filtroMarcaActual = 'todos';
-
+// Definimos la función completa
 function filtrarMotores(marca) {
   filtroMarcaActual = marca;
+  const marcaBuscada = marca.toLowerCase().trim();
   
-  // 1. Actualizar las clases activas (.active) en tus botones superiores originales
+// Marcar el botón activo
   const botones = document.querySelectorAll('.btn-filtro');
-  botones.forEach(btn => btn.classList.remove('active'));
-  
-  if (typeof event !== 'undefined' && event) {
-    if (event.currentTarget) {
-      event.currentTarget.classList.add('active');
-    } else if (event.target) {
-      const botonCercano = event.target.closest('.btn-filtro');
-      if (botonCercano) botonCercano.classList.add('active');
+  botones.forEach(btn => {
+    btn.classList.remove('active');
+    if (btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(`'${marcaBuscada}'`)) {
+      btn.classList.add('active');
     }
-  } else {
-    const btnTodos = document.querySelector('.fila-filtro-superior .btn-filtro');
-    if (btnTodos) btnTodos.classList.add('active');
+  });
+
+  // Ocultar las 4 portadas al filtrar por marca 
+  const gridPortadas = document.querySelector('.escaparate-wrapper > .motores-grid-cuatro');
+  if (gridPortadas) {
+    gridPortadas.style.display = (marca === 'todos') ? '' : 'none';
   }
 
-  // 2. Filtrar las tarjetas de motores aplicando el descarte de marca
+  // Ocultar o mostrar cada tarjeta según su atributo data-marca
   const tarjetas = document.querySelectorAll('.motor-card');
-  const panelesGama = document.querySelectorAll('.gama-desplegable-bloque');
-  const botonesVerGama = document.querySelectorAll('.btn-ver-gama-card');
-
   tarjetas.forEach(tarjeta => {
-    const marcaTarjeta = tarjeta.getAttribute('data-marca');
-
-    if (marca === 'todos' || marcaTarjeta === marca) {
+    const marcaTarjeta = (tarjeta.getAttribute('data-marca') || '').toLowerCase().trim();
+    if (marcaBuscada === 'todos' || marcaTarjeta === marcaBuscada ) {
+      tarjeta.style.display = '';
       tarjeta.classList.remove('oculto');
     } else {
+      tarjeta.style.display = 'none';
       tarjeta.classList.add('oculto');
     }
   });
 
-  // 3. Controlar la apertura y cierre automático de las gamas según la marca elegida
+   // Abrir las categorías que tengan motores de esa marca y ocultar las vacías
+  const panelesGama = document.querySelectorAll('.gama-desplegable-bloque');
+  const botonesVerGama = document.querySelectorAll('.btn-ver-gama-card');
+
   panelesGama.forEach(panel => {
     const tipoPanel = panel.id.replace('gama-', '');
     
-    if (marca === 'todos') {
-      // Si volvemos a "Todos", replegamos los paneles inferiores automáticamente
+    if (marcaBuscada === 'todos') {
+      panel.style.display = '';
       panel.classList.remove('abierto');
       panel.style.maxHeight = null;
       
-      // Restablecemos el texto original del botón de la tarjeta
       const btnAsociado = document.querySelector(`button[onclick*="'${tipoPanel}'"]`);
       if (btnAsociado) {
-  const plural = tipoPanel.endsWith('l') ? `${tipoPanel}es` : `${tipoPanel}s`;
-  btnAsociado.innerText = `Ver gama ${plural}`;
-}
-
-    // Hacemos que los botones de "Ver gama" vuelvan a ser visibles de serie
-      botonesVerGama.forEach(b => {
-        if (b.getAttribute('onclick') && b.getAttribute('onclick').includes(tipoPanel)) {
-          b.style.visibility = 'visible';
-        }
-      });
+        const plural = tipoPanel.endsWith('l') ? `${tipoPanel}es` : `${tipoPanel}s`;
+        btnAsociado.innerText = `Ver gama ${plural}`;
+      }
+      botonesVerGama.forEach(b => b.style.visibility = 'visible');
     } else {
-      // Si eligen una marca (Nice o DEA), forzamos la apertura total del panel para mostrar el arsenal completo
-      panel.classList.add('abierto');
-      panel.style.maxHeight = panel.scrollHeight + "px";
-      
-      // Ocultamos de forma temporal los botones porque ya se está exponiendo todo el catálogo
+      const tarjetasVisibles = panel.querySelectorAll('.motor-card:not(.oculto)');
+      if (tarjetasVisibles.length > 0) {
+        panel.style.display = '';
+        panel.classList.add('abierto');
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      } else {
+        panel.style.display = 'none';
+        panel.classList.remove('abierto');
+        panel.style.maxHeight = null;
+      }
       botonesVerGama.forEach(b => b.style.visibility = 'hidden');
     }
   });

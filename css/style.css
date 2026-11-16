@@ -668,6 +668,9 @@ transform: translateY(-5px);
 box-shadow: 0 12px 28px rgba(18, 34, 29, 0.08);
 border-left-color: var(--secondary-color);
 }
+.motor-card.oculto {
+display: none !important;
+}
 
 .badge-marca {
   width: 100%;
