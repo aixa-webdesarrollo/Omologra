@@ -1326,31 +1326,39 @@ h2.section-title {
 }
 
 .badge-marca {
-  position: absolute;
-  top: 15px;
-  left: 20px;
-  padding: 6px 12px;
-  border-radius: 4px;
-  z-index: 10;
+  width: 100%;
+  min-height: 54px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between; /* Logo a la izquierda, texto a la derecha */
+  gap: 10px;
+  padding: 10px 16px;
   background-color: #ffffff; 
-  border: 1px solid rgba(18, 34, 29, 0.06);
-  border-top: 2px solid var(--primary-color);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  border-bottom: 1px solid rgba(18, 34, 29, 0.06);
+  box-sizing: border-box;
 }
 
-/* ELIMINADOS los antiguos fondos pesados azul y gris */
 .marca-dea, .marca-nice { 
   background-color: #ffffff; 
 }
 
 .logo-marca-img {
-  height: 24px; /* Un tamaño un poco más estilizado para el badge */
-  width: auto;
+  height: 36px !important; 
+  width: auto !important;
+  max-width: 110px !important;
   display: block;
   object-fit: contain;
+}
+
+.badge-tipo-texto {
+  font-family: var(--font-titles);
+  font-size: 0.78rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--text-color);
+  letter-spacing: 0.5px;
+  border-left: 1px solid rgba(18, 34, 29, 0.15);
+  padding-left: 10px;
 }
 
 /* Contenedor temporal de la imagen */
