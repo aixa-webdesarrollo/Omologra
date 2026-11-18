@@ -479,7 +479,7 @@ if (titulo) {
 titulo.innerText = "Solicitar Presupuesto para Automatismo";
 }
 if (subtitulo) {
-subtitulo.innerText = "Cuéntanos más sobre tu proyecto para el motor " + nombreMotor + ". Te enviaremos una valoración a medida lo antes posible.";
+subtitulo.innerHTML = "Has seleccionado el motor <strong>" + nombreMotor + "</strong>. Cuéntanos brevemente cómo es tu puerta y te enviaremos un presupuesto a medida sin compromiso.";
 }
 const seccionContacto = document.getElementById('contacto');
 if (seccionContacto) {

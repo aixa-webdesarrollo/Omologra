@@ -1087,10 +1087,10 @@ display: none !important;
    ========================================================================== */
 .scroll-to-top {
     position: fixed;
-    bottom: 25px;
-    right: 25px;
-    width: 40px;
-    height: 40px;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
     background-color: var(--secondary-color);
     color: #ffffff !important;
     border-radius: 50px;
@@ -1098,7 +1098,7 @@ display: none !important;
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 22px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     z-index: 999;
     transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
