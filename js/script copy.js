@@ -111,7 +111,7 @@ const catalogoMotores = [
     tipo: "abatible",
     marca: "nice",
     nombre: "Nice Wingo 2024",
-    imagen: "img/Wingo2024.png",
+    imagen: "img/wingo2024.png",
     etiquetaUso: "Residencial",
     specs: [
       { icono: "📏", label: "Hoja máx.", valor: "Hasta 2,0 m" },
