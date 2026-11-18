@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
   
-  // Decalaramos la variable
+  // Declaramos la variable
   let filtroMarcaActual = 'todos';
   
   // Llamamos a la función inicial
