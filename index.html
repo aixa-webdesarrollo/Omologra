@@ -358,14 +358,14 @@
         </p>
 
         <form action="https://formsubmit.co/comercial@omologra.com" method="POST" class="contact-form">
-          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_captcha" value="true" />
           <input type="hidden" name="_subject" value="¡Nuevo mensaje de Asistencia Técnica!"/>
 
           <!-- Página de agradecimiento -->
           <input type="hidden" name="_next" value="https://omologra.com/gracias.html"/>
 
           <!-- 🛡️ Campo Honeypot anti-robots -->
-          <input type="text" name="_honey" style="display: none" />
+          <input type="text" name="_honey" style="display: none" tabindex="-1" autocomplete="off" />
 
           <div class="form-group">
             <label for="nombre">Nombre o Empresa:</label>
