@@ -50,7 +50,7 @@ const catalogoMotores = [
       { icono: "⚡", label: "Fuerza", valor: "600N / 1000N" },
       { icono: "📏", label: "Altura cabezal", valor: "90 mm" },
       { icono: "🔌", label: "Alimentación", valor: "24 Vdc" },
-      { icono: "🔗", label: "Sistema", valor: "BlueBUS" }
+      { icono: "🔗", label: "Sistema", valor: "BUS T4" }
     ]
   },
   {
@@ -204,11 +204,11 @@ const catalogoMotores = [
   {
     tipo: "corredera",
     marca: "nice",
-    nombre: "Nice Road 400 / 600",
+    nombre: "Nice Road 400",
     imagen: "img/NiceRoad.png",
     etiquetaUso: "Residencial",
     specs: [
-      { icono: "⚖️", label: "Peso máx.", valor: "400 kg / 600 kg" },
+      { icono: "⚖️", label: "Peso máx.", valor: "400 kg" },
       { icono: "🔌", label: "Alimentación", valor: "24 Vdc" },
       { icono: "📐", label: "Diseño", valor: "Compacto y ligero" },
       { icono: "🏠", label: "Uso", valor: "Residencial" }
